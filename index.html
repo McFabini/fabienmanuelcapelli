@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official website of music artist Fabien Manuel Capelli - McFabini">
+    <title>Fabien Manuel Capelli - Music Artist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Joti+One&display=swap" rel="stylesheet">
+    <style>
+
+        :root {
+            --primary-color: #0069FF;
+            --text-dark: #0A2A42;
+            --text-light: #FFFFFF;
+            --background-dark: #000000;
+            --background-light: #FFFFFF;
+            --background-purple: #8E76F0;
+            --background-gray: #D9D9D9;
+            --spacing-unit: 8px;
+            --container-width: 1200px;
+            --focus-outline: 3px solid var(--primary-color);
+            --transition-speed: 0.3s;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.5;
+            color: var(--text-dark);
+            background-color: var(--background-light);
+            overflow-x: hidden;
+            width: 100vw;
+        }
+        nav {
+            width: 80%;  /* Définit une largeur pour ton menu */
+            margin: 0 auto;  /* Centrage automatique horizontal */
+            }
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-color);
+            color: var(--text-light);
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        .main-wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            width: 100vw;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background-color: var(--bg-light);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            padding: 0.5rem;
+        }
+        .brand-section {
+            flex: 0 1 auto;
+            animation: fadeIn 1s ease-out 0.3s backwards;
+
+        }
+
+        .brand-name {
+            font-family: 'Joti One', cursive;
+            color: var(--text-dark);
+            font-size: 1.2rem;
+            transition: color var(--transition-speed) ease;
+        }
+
+        .brand-name:hover {
+            color: var(--primary-color);
+
+            
+        }
+        .nav-section {
+            flex: 1 1 auto;
+        }
+
+        .nav-list {
+            display: flex;
+            gap: calc(var(--spacing-unit) * 3);
+            list-style: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            list-style: none;
+        }
+
+
+        .nav-item:hover::after,
+        .nav-item:focus::after {
+            width: 100%;
+        }
+        /* Style pour le menu déroulant */
+        .nav-item {
+            color: var(--text-dark);
+            text-decoration: none;
+            padding: 0.5rem;
+            transition: all var(--transition-speed) ease;
+            position: relative;
+        }
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width var(--transition-speed) ease;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+        display: none; /* Masqué par défaut */
+        position: absolute; /* Il se positionne en-dessous de l'élément parent */
+        top: 100%; /* Positionné juste sous le menu parent */
+        left: 0;
+        background-color: #ffffff;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        z-index: 10; 
+        }
+
+        .dropdown-item {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: background-color var(--transition-speed) ease;
+        }
+
+        .dropdown-item:hover {
+            background-color: var(--bg-light-gray);
+            color: var(--primary-color);
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        a.btn {
+            display: inline-block; /* S'assurer que le lien se comporte comme un bouton */
+            background-color: rgb(0, 105, 255); /* Couleur de fond du bouton */
+            color: white; /* Couleur du texte */
+            padding: 12px 24px; /* Espacement intérieur */
+            text-decoration: none; /* Retirer le soulignement */
+            border-radius: 8px; /* Bords arrondis */
+            font-weight: 600;
+            font-size: 18px;
+            margin-left: 20px; /* Espacement à gauche */
+            transition: background-color 0.3s ease; /* Effet au survol */
+            visibility: visible; /* S'assurer que le bouton est visible */
+            opacity: 1; /* Assurer une bonne visibilité */
+        }
+
+        a.btn:hover {
+            background-color: rgb(0, 85, 210); /* Changer la couleur au survol */
+        }
+
+        a.btn:focus {
+            outline: 3px solid rgb(0, 105, 255); /* Contour quand il est sélectionné */
+            outline-offset: 2px;
+
+        }
+        button, .btn {
+        background-color: var(--primary-color);
+        color: var(--text-light);
+        border: none;
+        border-radius: 10px;
+        padding: 0.75rem 1.5rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all var(--transition-speed) ease;
+        }
+
+        button:hover, .btn:hover,
+        button:focus, .btn:focus {
+            background-color: #0052cc;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active, .btn:active {
+            transform: translateY(0);
+            box-shadow: none;
+        }
+
+        .contact-btn:hover,
+        .contact-btn:focus {
+            background-color: #0052cc;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-section {
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            padding: calc(var(--spacing-unit) * 12) var(--spacing-unit);
+            width: 100%;
+        }
+
+        .hero-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: calc(var(--spacing-unit) * 8);
+            align-items: center;
+        }
+
+        .centered-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: calc(var(--spacing-unit) * 12) 0;
+            width: 100%;
+        }
+
+        .section-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            width: 100%;
+        }
+
+        .about-section {
+            background-color: var(--background-gray);
+            margin: 0;
+            padding: calc(var(--spacing-unit) * 12) 0;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            margin-right: calc(-50vw + 50%);
+        }
+
+        .services-section {
+            background-color: var(--background-light);
+            margin: 0;
+            padding: calc(var(--spacing-unit) * 12) 0;
+        }
+
+        .contact-section {
+            background-color: var(--background-purple);
+            margin: 0;
+            padding: calc(var(--spacing-unit) * 12) 0;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            margin-right: calc(-50vw + 50%);
+        }
+
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            gap: calc(var(--spacing-unit) * 3);
+        }
+
+        .social-links {
+            display: flex;
+            gap: calc(var(--spacing-unit) * 2);
+            justify-content: flex-start;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--background-light);
+            transition: transform 1s;
+        }
+
+        .social-link:hover,
+        .social-link:focus {
+            transform: scale(1.1);
+        }
+
+        .social-link img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .hero-text {
+            margin-bottom: calc(var(--spacing-unit) * 3);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        .hero-heading {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: calc(var(--spacing-unit) * 2);
+        }
+
+        .hero-description {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: auto;
+            border-radius: 27px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer {
+            background-color: var(--background-dark);
+            color: var(--text-light);
+            padding: calc(var(--spacing-unit) * 3);
+            text-align: center;
+            width: 100%;
+        }
+
+        .buttons-group {
+            display: flex;
+            gap: calc(var(--spacing-unit) * 2);
+            justify-content: center;
+            margin-top: calc(var(--spacing-unit) * 3);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(100px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .slide-in-left.visible,
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        @media (max-width: 991px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: var(--spacing-unit);
+            }
+
+            .nav-list {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-heading {
+                font-size: 2rem;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .centered-section {
+                padding: calc(var(--spacing-unit) * 6) var(--spacing-unit);
+            }
+        }
+        #various-services {
+            background-image: url("../images/background.jpg"); /* Remplace par le chemin de ton image */
+            background-size: cover; /* Pour couvrir toute la section */
+            background-position: center; /* Centre l'image */
+            background-repeat: no-repeat; /* Empêche la répétition */
+            padding: 50px 20px; /* Ajoute de l'espace intérieur pour le contenu */
+            color: #fff; /* Change la couleur du texte pour qu'il soit lisible */
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.hero-content').forEach(el => {
+                el.classList.add('slide-in-left');
+                observer.observe(el);
+            });
+
+            document.querySelectorAll('.hero-image').forEach(el => {
+                el.classList.add('slide-in-right');
+                observer.observe(el);
+            });
+
+            document.querySelectorAll('.section-content').forEach(el => {
+                el.classList.add('fade-in');
+                observer.observe(el);
+            });
+
+            document.querySelectorAll('.social-link').forEach(el => {
+                el.classList.add('scale-in');
+                observer.observe(el);
+            });
+            
+        });
+    </script>
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header" role="banner">
+            <div class="header-container">
+                <div class="brand-section">
+                    <h1 class="brand-name">Fabien Manuel Capelli</h1>
+                </div>
+                <nav class="nav-section" role="navigation" aria-label="Main navigation">
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="nav-item">Home</a></li>
+                        <li><a href="pages/about.html" class="nav-item">About me</a></li>
+                        <li><a href="pages/services.html" class="nav-item">Services</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">Platforms</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://egge-verlag.de/index.php?option=com_virtuemart&view=productdetails&virtuemart_product_id=831&virtuemart_category_id=1&Itemid=14" target="_blank" rel="noopener noreferrer" class="dropdown-item">Egge Verlag</a></li>
+                                <li><a href="https://www.beatstars.com/mcfabinibeats" target="_blank" rel="noopener noreferrer" class="dropdown-item">BeatStars</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="mailto:contact@fabienmanuelcapelli.com?subject=Contact%20Request&body=Hello%20Fabien,%20I%20would%20like%20to%20get%20in%20touch."
+                class="btn" aria-label="Contact me">Contact</a>
+            </div>
+        </header>
+    </div>
+</body>
+
+        <main id="main-content" role="main">
+            <section class="hero-section" aria-labelledby="hero-title">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <div class="social-links" aria-label="Social media links">
+                            <a href="#" class="social-link" aria-label="Visit us on platform 1">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/9a4fc4c991304f5eb40419689f9cc6cc/a52c9ab7efe662e9560b80c6eddbe9dee360badcc45d4826ec4f670373f428dc?apiKey=9a4fc4c991304f5eb40419689f9cc6cc&" alt="" role="presentation">
+                            </a>
+                            <a href="#" class="social-link" aria-label="Visit us on platform 2">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/9a4fc4c991304f5eb40419689f9cc6cc/15e92c405825c0cfe1264f569969c11f2fb1041b3a06d185b6c4b71d38cbc8eb?apiKey=9a4fc4c991304f5eb40419689f9cc6cc&" alt="" role="presentation">
+                            </a>
+                            <a href="#" class="social-link" aria-label="Visit us on platform 3">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/9a4fc4c991304f5eb40419689f9cc6cc/8d57e2df89f183c0f76f3e215d0d1b67c0ef28267422c37070b1d7cd01c5485e?apiKey=9a4fc4c991304f5eb40419689f9cc6cc&" alt="" role="presentation">
+                            </a>
+                        </div>
+                        
+                        <div class="hero-text">
+                            <h1 id="hero-title" class="section-title">McFabini</h1>
+                            <p class="hero-heading">NEW SINGLE!</p>
+                            <p class="hero-description">The last single of 2024</p>
+                        </div>
+                        
+                        <button class="btn" aria-label="Listen to the new single" onclick="window.open('https://push.fm/fl/harmonicdrift', '_blank')">Listen!</button>
+                    </div>
+                    
+                    <img src="https://cdn.builder.io/api/v1/image/assets/9a4fc4c991304f5eb40419689f9cc6cc/273b0655028e765df77d9fa00256c6476b2afe18f366e1f0e90c616ace1bf06f?apiKey=9a4fc4c991304f5eb40419689f9cc6cc&" 
+                         alt="New single artwork cover" 
+                         class="hero-image"
+                         width="616"
+                         height="616">
+                </div>
+            </section><style>
+				.banner-image {
+				  aspect-ratio: 11.49;
+				  object-fit: contain;
+				  object-position: center;
+				  width: 100%;
+				}
+				
+				.visually-hidden {
+				  position: absolute;
+				  width: 1px;
+				  height: 1px;
+				  padding: 0;
+				  margin: -1px;
+				  overflow: hidden;
+				  clip: rect(0, 0, 0, 0);
+				  white-space: nowrap;
+				  border: 0;
+				}
+			  
+				@media (max-width: 991px) {
+				  .banner-image {
+					max-width: 100%;
+				  }
+				}
+			  </style>
+			  
+			  <section aria-label="Hero Banner">
+				<h1 class="visually-hidden">Welcome to our website</h1>
+				<img
+				  loading="lazy"
+				  src="https://cdn.builder.io/api/v1/image/assets/9a4fc4c991304f5eb40419689f9cc6cc/fd5d64440a35b7652adef6e6a923ab3ce652f96521be72880d6e1572a4bcf70e?apiKey=9a4fc4c991304f5eb40419689f9cc6cc&"
+				  class="banner-image"
+				  alt="Hero banner showcasing our main message"
+				  role="img"
+				/>
+            <section id="about" class="about-section centered-section" aria-labelledby="about-title">
+                <div class="section-content">
+                    <h2 id="about-title" class="section-title">About Me</h2>
+                    <img src="https://cdn.builder.io/api/v1/image/assets/9a4fc4c991304f5eb40419689f9cc6cc/074c69391b5c758126beee886cfccd1fc2751a7c839f64992f660bcf3047774d?apiKey=9a4fc4c991304f5eb40419689f9cc6cc&" 
+                         alt="Fabien Manuel Capelli portrait" 
+                         width="201"
+                         height="201">
+                    <div class="about-text">
+                        <h3>Fabien Manuel Capelli</h3>
+                        <p>McFabini</p>
+                        <button class="btn" aria-label="Learn more about me" onclick="window.location.href='pages/about.html'">About me</button>
+                    </div>
+            </section>
+
+            <section id="services" class="services-section centered-section" aria-labelledby="services-title">
+                <div class="section-content">
+                    <style>
+            /* Styles intégrés */
+            .services-section {
+                background-image: url("https://i.postimg.cc/hPQRrZ6N/imageside.png"); /* Image hébergée sur Postimages */
+                background-size: cover; /* L'image couvre tout le conteneur */
+                background-position: center; /* Centre l'image */
+                background-repeat: no-repeat; /* Évite la répétition */
+                height: 100vh; /* Ajuste la hauteur à 100% de la hauteur de l'écran */
+                width: 100%; /* Prend toute la largeur */
+                display: flex; /* Active le mode flexbox pour aligner le contenu */
+                justify-content: center; /* Centre le contenu horizontalement */
+                align-items: center; /* Centre le contenu verticalement */
+                text-align: center;
+            }
+
+            .services-section .section-content {
+                z-index: 1; /* Assurez-vous que le contenu soit au-dessus de l'image */
+                position: relative;
+            }
+
+            .services-section .content h1 {
+                font-size: 3rem;
+                margin: 0;
+            }
+
+            .services-section .content p {
+                font-size: 1.5rem;
+                margin: 10px 0 0;
+            }
+        </style>
+                    <h2 id="services-title" class="section-title">Services</h2>
+                    <p class="hero-heading">Various services</p>
+                    <p class="hero-description">*Available on this website and BeatStars</p>
+                    <div class="buttons-group">
+                        <button class="btn" aria-label="Pricing" onclick="window.location.href='pages/services.html';">Pricing</button>
+                        <button class="btn" aria-label="Visit BeatStars" onclick="window.open('https://www.beatstars.com/mcfabinibeats', '_blank')" >BeatStars</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="contact-section centered-section" aria-labelledby="contact-title">
+                <div class="section-content">
+                    <h2 id="contact-title" class="section-title">Contact me</h2>
+                    <p>Mail: contact@fabienmanuelcapelli.com</p>
+                    <div class="btn-container"></div>
+                <a href="mailto:contact@fabienmanuelcapelli.com?subject=Contact%20Request&body=Hello%20Fabien,%20I%20would%20like%20to%20get%20in%20touch." 
+                class="btn" aria-label="Contact me">Contact</a>
+                <style>
+                    .btn-container {
+                    margin-top: 40px; /* Ajoute un espace de 40px au-dessus du bouton */
+}
+                </style>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer" role="contentinfo">
+            <p>© 2025 - Developed by Fabien Manuel Capelli</p>
+        </footer>
+    </div>
+</body>
+</html>
