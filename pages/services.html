@@ -2,490 +2,118 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services</title>
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page avec Menu</title>
+    <title>Services</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../menu.css">
-</head>
-<body><div class="page-wrapper">
-    <header class="header" role="banner">
-        <div class="header-container">
-            <div class="brand-section">
-              <img src="https://upload.skybot.fr/uploads/67e1a94ca420f9.65825251.png" alt="Description de l'image" class="brand-image" width="108,75" height="46,75">
-            </div>
-            <nav class="nav-section" role="navigation" aria-label="Main navigation">
-                <ul class="nav-links">
-                    <li><a href="../index.html" class="nav-item">Home</a></li>
-                    <li><a href="about.html" class="nav-item">About me</a></li>
-                    <li><a href="services.html" class="nav-item">Services</a></li>
-                    <li class="dropdown">
-                        <a href="#platforms" class="nav-item">Platforms</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="https://egge-verlag.de/index.php?option=com_virtuemart&view=productdetails&virtuemart_product_id=831&virtuemart_category_id=1&Itemid=14" target="_blank" rel="noopener noreferrer" class="dropdown-item">Egge Verlag</a></li>
-                            <li><a href="https://www.beatstars.com/mcfabinibeats" target="_blank" rel="noopener noreferrer" class="dropdown-item">Beatstars</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <a href="mailto:contact@fabienmanuelcapelli.com?subject=Contact%20Request&body=Hello%20Fabien,%20I%20would%20like%20to%20get%20in%20touch."
-                class="btn" aria-label="Contact me">Contact</a>      
-        </div>
-        <section class="pricing-container" aria-label="Pricing Plans">
-            <div class="pricing-hero">
-              <img src="https://cdn.builder.io/api/v1/image/assets/9a4fc4c991304f5eb40419689f9cc6cc/fe709be660a9c9be2ec3661ca9a203ca75cab4e5ad8778f852414949765658ac?apiKey=9a4fc4c991304f5eb40419689f9cc6cc&" alt="" class="hero-background" role="presentation"/>
-              <div class="pricing-content">
-                <div class="pricing-grid">
-                  <div class="pricing-row">
-                    <div class="pricing-col-wide">
-                      <div class="pricing-plans">
-                        <div class="plans-container">
-                          <div class="plan-col">
-                            <article class="plan-card">
-                              <header class="plan-header">
-                                <h2 class="plan-type">STUDENT PLAN*</h2>
-                                <p class="plan-price">25$ OR 25€</p>
-                                <p class="plan-subtitle">CONDITIONS</p>
-                              </header>
-                              <ul class="plan-features" aria-label="Plan Features">
-                                <li>MIDI COMPOSITION</li>
-                                <li>MIX & MASTERING</li>
-                                <li>Under 25 years old</li>
-                                <li>2 minutes max</li>
-                              </ul>
-                              <a href="mailto:contact@fabienmanuelcapelli.com?subject=Contact%20Request&body=Hello%20Fabien,%20I%20would%20like%20to%20get%20in%20touch."
-                            class="btn" aria-label="Contact me">Contact</a>
-                              <p class="verification-text">valid ID card sent by e-mail (verification of real documents)</p>
-                            </article>
-                          </div>
-                          <div class="plan-col">
-                            <article class="plan-card">
-                              <header class="plan-header">
-                                <h2 class="plan-type">BASIC PLAN*</h2>
-                                <p class="plan-price">50$ OR 50€</p>
-                                <p class="plan-subtitle">CONDITIONS</p>
-                              </header>
-                              <ul class="plan-features" aria-label="Plan Features">
-                                <li>MIDI COMPOSITION</li>
-                                <li>MIX & MASTERING</li>
-                                <li>4 minutes max</li>
-                              </ul>
-                              <a href="mailto:contact@fabienmanuelcapelli.com?subject=Contact%20Request&body=Hello%20Fabien,%20I%20would%20like%20to%20get%20in%20touch."
-                            class="btn" aria-label="Contact me">Contact</a>
-                            </article>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="plan-col">
-                      <article class="plan-card">
-                        <header class="plan-header">
-                          <h2 class="plan-type">PREMIUM PLAN*</h2>
-                          <p class="plan-price">100$ OR 100€</p>
-                          <p class="plan-subtitle">CONDITIONS</p>
-                        </header>
-                        <ul class="plan-features" aria-label="Plan Features">
-                          <li>MIDI COMPOSITION</li>
-                          <li>MIX & MASTERING</li>
-                          <li>Content ID*</li>
-                          <li>8 minutes max</li>
-                        </ul>
-                        <a href="mailto:contact@fabienmanuelcapelli.com?subject=Contact%20Request&body=Hello%20Fabien,%20I%20would%20like%20to%20get%20in%20touch."
-                            class="btn" aria-label="Contact me">Contact</a>
-                        <p class="verification-text">if specified in the e-mail</p>
-                      </article>
-                    </div>
-                  </div>
+    <link rel="stylesheet" href="../style/services.css"> </head>
+<body>
+    <div class="page-wrapper">
+        <header class="header" role="banner">
+            <div class="header-container">
+                <div class="brand-section">
+                    <img src="https://upload.skybot.fr/uploads/67e1a94ca420f9.65825251.png" alt="Description de l'image" class="brand-image" width="108,75" height="46,75">
                 </div>
-                <p class="beatstars-section">Or view my available services on BeatStars</p>
-                <a href="https://www.beatstars.com/mcfabinibeats" target="_blank" rel="noopener noreferrer">
-                    <button class="beatstars-button" aria-label="View services on BeatStars">BeatStars</button>
-                </a>
-              </div>
+                <nav class="nav-section" role="navigation" aria-label="Main navigation">
+                    <ul class="nav-links">
+                        <li><a href="../index.html" class="nav-item">Home</a></li>
+                        <li><a href="about.html" class="nav-item">About me</a></li>
+                        <li><a href="services.html" class="nav-item">Services</a></li>
+                        <li class="dropdown">
+                            <a href="#platforms" class="nav-item">Platforms</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://egge-verlag.de/index.php?option=com_virtuemart&view=productdetails&virtuemart_product_id=831&virtuemart_category_id=1&Itemid=14" target="_blank" rel="noopener noreferrer" class="dropdown-item">Egge Verlag</a></li>
+                                <li><a href="https://www.beatstars.com/mcfabinibeats" target="_blank" rel="noopener noreferrer" class="dropdown-item">Beatstars</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="mailto:contact@fabienmanuelcapelli.com?subject=Contact%20Request&body=Hello%20Fabien,%20I%20would%20like%20to%20get%20in%20touch."
+                    class="btn" aria-label="Contact me">Contact</a>      
             </div>
-            <div class="platforms-section" aria-label="Platform Logos">
-              <img src="https://cdn.builder.io/api/v1/image/assets/9a4fc4c991304f5eb40419689f9cc6cc/fa6cebb75726e529b8a389d75769d3e41b2fc028b148163d69764252f4ee7233?apiKey=9a4fc4c991304f5eb40419689f9cc6cc&" alt="Platform Logo 1" class="platform-logo logo-animation" style="width: 371px"/>
-              <img src="https://cdn.builder.io/api/v1/image/assets/9a4fc4c991304f5eb40419689f9cc6cc/b8245e33778b9d8c309a9361c0bb9cf9c4ce61c22e980efdbd42735e48dd1e5c?apiKey=9a4fc4c991304f5eb40419689f9cc6cc&" alt="Platform Logo 2" class="platform-logo logo-animation" style="width: 405px"/>
-              <img src="https://cdn.builder.io/api/v1/image/assets/9a4fc4c991304f5eb40419689f9cc6cc/a6140d40f7ffda7ad419ac29266be8509b778d4da984702bf5aeb835ffb4321a?apiKey=9a4fc4c991304f5eb40419689f9cc6cc&" alt="Platform Logo 3" class="platform-logo logo-animation" style="width: 185px"/>
-            </div>
-            <footer class="footer" role="contentinfo">
-              <p>v1.0.1 © 2025 - Developed by Fabien Manuel Capelli - All rights reserved</p>
-              <p><a href="cgu.html">Terms of Service</a></p>
-            </footer>
-          </section>
-          
-          <style>
-            /* Réinitialisation des marges et paddings */
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-
-            /* S'assurer que body et html prennent toute la hauteur et largeur */
-            html, body {
-                height: 100%;
-                width: 100%;
-            }
-
-            /* Page wrapper pour prendre toute la largeur */
-            .page-wrapper {
-                width: 100%;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-            }
-
-            /* Réinitialiser marges et paddings dans les sections principales */
-            header, footer, .pricing-container, .pricing-hero {
-                margin: 0;
-                padding: 0;
-            }
-            a.btn {
-            display: inline-block; /* S'assurer que le lien se comporte comme un bouton */
-            background-color: rgb(0, 105, 255); /* Couleur de fond du bouton */
-            color: white; /* Couleur du texte */
-            padding: 12px 24px; /* Espacement intérieur */
-            text-decoration: none; /* Retirer le soulignement */
-            border-radius: 8px; /* Bords arrondis */
-            font-weight: 600;
-            font-size: 18px;
-            margin-left: 20px; /* Espacement à gauche */
-            transition: background-color 0.3s ease; /* Effet au survol */
-            visibility: visible; /* S'assurer que le bouton est visible */
-            opacity: 1; /* Assurer une bonne visibilité */
-        }
-
-        a.btn:hover {
-            background-color: rgb(0, 85, 210); /* Changer la couleur au survol */
-        }
-
-        a.btn:focus {
-            outline: 3px solid rgb(0, 105, 255); /* Contour quand il est sélectionné */
-            outline-offset: 2px;
-        }
-
-        a.btn {
-        display: inline-block;
-        background-color: rgb(0, 105, 255);
-        color: white;
-        padding: 12px 24px;
-        text-decoration: none;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 18px;
-        margin-left: 20px;
-        transition: background-color 0.3s ease;
-        visibility: visible;
-        opacity: 1;
-        max-width: 120px;  /* Limiter la largeur */
-        white-space: nowrap;  /* Empêcher le texte de se couper sur plusieurs lignes */
-        text-overflow: ellipsis; /* Ajouter une ellipse si le texte est trop long */
-        overflow: hidden;
-    }
-          .pricing-container {
-            display: flex;
-            flex-direction: column;
-            max-width: 1920px;
-            margin: 0 auto;
-          }
-          
-          .pricing-hero {
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            min-height: 100vh;
-            width: 100%;
-            align-items: center;
-            padding: 120px 40px;
-          }
-          
-          .hero-background {
-            position: absolute;
-            inset: 0;
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            object-position: center;
-          }
-          
-          .pricing-content {
-            position: relative;
-            display: flex;
-            width: 100%;
-            max-width: 1200px;
-            flex-direction: column;
-            align-items: center;
-          }
-          
-          .pricing-grid {
-            width: 100%;
-          }
-          
-          .pricing-row {
-            gap: 30px;
-            display: flex;
-            justify-content: center;
-          }
-          
-          .pricing-col-wide {
-            display: flex;
-            flex-direction: column;
-            width: 68%;
-          }
-          
-          .pricing-plans {
-            display: flex;
-            width: 100%;
-            flex-direction: column;
-          }
-          
-          .plans-container {
-            gap: 30px;
-            display: flex;
-          }
-          
-          .plan-col {
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-          }
-          
-          .plan-card {
-            display: flex;
-            flex-grow: 1;
-            flex-direction: column;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-          }
-          
-          .plan-card:hover {
-            transform: translateY(-5px);
-          }
-          
-          .plan-header {
-            text-align: center;
-            margin-bottom: 30px;
-          }
-          
-          .plan-type {
-            font-size: 24px;
-            font-weight: 600;
-            color: rgb(10, 42, 66);
-            margin: 0;
-          }
-          
-          .plan-price {
-            font-size: 48px;
-            font-weight: 700;
-            color: rgb(0, 0, 0);
-            margin: 15px 0;
-          }
-          
-          .plan-subtitle {
-            font-size: 16px;
-            color: rgb(10, 42, 66);
-            margin: 0;
-          }
-          
-          .plan-features {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            font-size: 18px;
-            line-height: 1.6;
-          }
-          
-          .plan-features li {
-            margin: 10px 0;
-            padding: 5px 0;
-          }
-          
-          .cta-button {
-            align-self: center;
-            min-width: 160px;
-            border-radius: 8px;
-            background-color: rgb(0, 105, 255);
-            color: white;
-            font-weight: 600;
-            font-size: 18px;
-            padding: 12px 24px;
-            margin-top: auto;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-          }
-          
-          .cta-button:hover {
-            background-color: rgb(0, 85, 210);
-          }
-          
-          .cta-button:focus {
-            outline: 3px solid rgb(0, 105, 255);
-            outline-offset: 2px;
-          }
-          
-          .verification-text {
-            font-size: 14px;
-            color: rgb(102, 102, 102);
-            text-align: center;
-            margin-top: 15px;
-          }
-          
-          .beatstars-section {
-            font-size: 32px;
-            color: rgb(0, 0, 0);
-            text-align: center;
-            margin: 40px 0;
-          }
-          
-          .beatstars-button {
-            min-width: 200px;
-            border-radius: 8px;
-            background-color: rgb(0, 105, 255);
-            color: white;
-            font-weight: 600;
-            font-size: 18px;
-            padding: 12px 24px;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-          }
-          
-          .beatstars-button:hover {
-            background-color: rgb(0, 85, 210);
-          }
-          
-          .platforms-section {
-            background-color: rgb(78, 76, 76);
-            display: flex;
-            padding: 40px;
-            justify-content: center;
-            align-items: center;
-            gap: 60px;
-            flex-wrap: wrap;
-          }
-          
-          .platform-logo {
-            max-height: 60px;
-            width: auto;
-            opacity: 0.8;
-            transition: all 0.3s ease;
-          }
-          
-          .logo-animation {
-            animation: float 3s ease-in-out infinite;
-          }
-          
-          @keyframes float {
-            0% {
-              transform: translateY(0px);
-            }
-            50% {
-              transform: translateY(-10px);
-            }
-            100% {
-              transform: translateY(0px);
-            }
-          }
-          
-          .platform-logo:hover {
-            opacity: 1;
-            transform: scale(1.1);
-          }
-          
-          .footer {
-            background-color: rgb(0, 0, 0);
-            color: white;
-            text-align: center;
-            padding: 20px;
-            width: 100%;
-          }
-          
-          .footer p {
-            margin: 0;
-            font-size: 16px;
-          }
-          
-          @media (max-width: 1200px) {
-            .pricing-hero {
-              padding: 80px 20px;
-            }
-            
-            .pricing-row {
-              flex-direction: column;
-            }
-            
-            .pricing-col-wide {
-              width: 100%;
-            }
-            
-            .plans-container {
-              flex-direction: column;
-            }
-            
-            .plan-card {
-              margin-bottom: 30px;
-            }
-            
-            .plan-price {
-              font-size: 36px;
-            }
-            
-            .platforms-section {
-              padding: 20px;
-              gap: 30px;
-            }
-            
-            .platform-logo {
-              max-height: 40px;
-            }
-          }
-          
-          @media (max-width: 768px) {
-            .pricing-hero {
-              padding: 60px 15px;
-            }
-            
-            .plan-type {
-              font-size: 20px;
-            }
-            
-            .plan-price {
-              font-size: 32px;
-            }
-            
-            .plan-features {
-              font-size: 16px;
-            }
-            
-            .beatstars-section {
-              font-size: 24px;
-            }
-            
-            .cta-button,
-            .beatstars-button {
-              width: 100%;
-              max-width: 300px;
-            }
-          }
-          
-          @media (prefers-reduced-motion: reduce) {
-            .logo-animation {
-              animation: none;
-            }
-            
-            .plan-card,
-            .cta-button,
-            .beatstars-button,
-            .platform-logo {
-              transition: none;
-            }
-          }
-          </style>
-    
+            <section class="pricing-container" aria-label="Pricing Plans">
+                <div class="pricing-hero">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/9a4fc4c991304f5eb40419689f9cc6cc/fe709be660a9c9be2ec3661ca9a203ca75cab4e5ad8778f852414949765658ac?apiKey=9a4fc4c991304f5eb40419689f9cc6cc&" alt="" class="hero-background" role="presentation"/>
+                    <div class="pricing-content">
+                        <div class="pricing-grid">
+                            <div class="pricing-row">
+                                <div class="pricing-col-wide">
+                                    <div class="pricing-plans">
+                                        <div class="plans-container">
+                                            <div class="plan-col">
+                                                <article class="plan-card">
+                                                    <header class="plan-header">
+                                                        <h2 class="plan-type">STUDENT PLAN*</h2>
+                                                        <p class="plan-price">25$ OR 25€</p>
+                                                        <p class="plan-subtitle">CONDITIONS</p>
+                                                    </header>
+                                                    <ul class="plan-features" aria-label="Plan Features">
+                                                        <li>MIDI COMPOSITION</li>
+                                                        <li>MIX & MASTERING</li>
+                                                        <li>Under 25 years old</li>
+                                                        <li>2 minutes max</li>
+                                                    </ul>
+                                                    <a href="mailto:contact@fabienmanuelcapelli.com?subject=Contact%20Request&body=Hello%20Fabien,%20I%20would%20like%20to%20get%20in%20touch."
+                                                    class="btn" aria-label="Contact me">Contact</a>
+                                                    <p class="verification-text">valid ID card sent by e-mail (verification of real documents)</p>
+                                                </article>
+                                            </div>
+                                            <div class="plan-col">
+                                                <article class="plan-card">
+                                                    <header class="plan-header">
+                                                        <h2 class="plan-type">BASIC PLAN*</h2>
+                                                        <p class="plan-price">50$ OR 50€</p>
+                                                        <p class="plan-subtitle">CONDITIONS</p>
+                                                    </header>
+                                                    <ul class="plan-features" aria-label="Plan Features">
+                                                        <li>MIDI COMPOSITION</li>
+                                                        <li>MIX & MASTERING</li>
+                                                        <li>4 minutes max</li>
+                                                    </ul>
+                                                    <a href="mailto:contact@fabienmanuelcapelli.com?subject=Contact%20Request&body=Hello%20Fabien,%20I%20would%20like%20to%20get%20in%20touch."
+                                                    class="btn" aria-label="Contact me">Contact</a>
+                                                </article>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="plan-col">
+                                    <article class="plan-card">
+                                        <header class="plan-header">
+                                            <h2 class="plan-type">PREMIUM PLAN*</h2>
+                                            <p class="plan-price">100$ OR 100€</p>
+                                            <p class="plan-subtitle">CONDITIONS</p>
+                                        </header>
+                                        <ul class="plan-features" aria-label="Plan Features">
+                                            <li>MIDI COMPOSITION</li>
+                                            <li>MIX & MASTERING</li>
+                                            <li>Content ID*</li>
+                                            <li>8 minutes max</li>
+                                        </ul>
+                                        <a href="mailto:contact@fabienmanuelcapelli.com?subject=Contact%20Request&body=Hello%20Fabien,%20I%20would%20like%20to%20get%20in%20touch."
+                                            class="btn" aria-label="Contact me">Contact</a>
+                                        <p class="verification-text">if specified in the e-mail</p>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="beatstars-section">Or view my available services on BeatStars</p>
+                        <a href="https://www.beatstars.com/mcfabinibeats" target="_blank" rel="noopener noreferrer">
+                            <button class="beatstars-button" aria-label="View services on BeatStars">BeatStars</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="platforms-section" aria-label="Platform Logos">
+                    <img src="https://cdn.builder.io/api/v1/image/assets/9a4fc4c991304f5eb40419689f9cc6cc/fa6cebb75726e529b8a389d75769d3e41b2fc028b148163d69764252f4ee7233?apiKey=9a4fc4c991304f5eb40419689f9cc6cc&" alt="Platform Logo 1" class="platform-logo logo-animation" style="width: 371px"/>
+                    <img src="https://cdn.builder.io/api/v1/image/assets/9a4fc4c991304f5eb40419689f9cc6cc/b8245e33778b9d8c309a9361c0bb9cf9c4ce61c22e980efdbd42735e48dd1e5c?apiKey=9a4fc4c991304f5eb40419689f9cc6cc&" alt="Platform Logo 2" class="platform-logo logo-animation" style="width: 405px"/>
+                    <img src="https://cdn.builder.io/api/v1/image/assets/9a4fc4c991304f5eb40419689f9cc6cc/a6140d40f7ffda7ad419ac29266be8509b778d4da984702bf5aeb835ffb4321a?apiKey=9a4fc4c991304f5eb40419689f9cc6cc&" alt="Platform Logo 3" class="platform-logo logo-animation" style="width: 185px"/>
+                </div>
+                <footer class="footer" role="contentinfo">
+                    <p>v1.0.1 © 2025 - Developed by Fabien Manuel Capelli - All rights reserved</p>
+                    <p><a href="cgu.html">Terms of Service</a></p>
+                </footer>
+            </section>
+        </header>
+    </div>
+</body>
+</html>

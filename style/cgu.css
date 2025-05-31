@@ -1,0 +1,389 @@
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes slideLeftRight {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(20px); }
+    100% { transform: translateX(0); }
+}
+        
+:root {
+    --primary-color: #0069ff;
+    --text-dark: #0a2a42;
+    --text-light: #fff;
+    --bg-light: #fff;
+    --bg-dark: #000;
+    --bg-gray: #4e4c4c;
+    --bg-light-gray: #d9d9d9;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a.btn {
+    display: inline-block; /* S'assurer que le lien se comporte comme un bouton */
+    background-color: rgb(0, 105, 255); /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    padding: 12px 24px; /* Espacement intérieur */
+    text-decoration: none; /* Retirer le soulignement */
+    border-radius: 8px; /* Bords arrondis */
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 20px; /* Espacement à gauche */
+    transition: background-color 0.3s ease; /* Effet au survol */
+    visibility: visible; /* S'assurer que le bouton est visible */
+    opacity: 1; /* Assurer une bonne visibilité */
+}
+
+a.btn:hover {
+    background-color: rgb(0, 85, 210); /* Changer la couleur au survol */
+}
+
+a.btn:focus {
+    outline: 3px solid rgb(0, 105, 255); /* Contour quand il est sélectionné */
+    outline-offset: 2px;
+}   
+
+body {
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+body nav { /* Targeting nav directly under body for specificity, adjust if needed */
+    width: 80%;  /* Définit une largeur pour ton menu */
+    margin: 0 auto;  /* Centrage automatique horizontal */
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--bg-light);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: background-color var(--transition-speed) ease;
+}
+
+.dropdown-item:hover {
+    background-color: var(--bg-light-gray);
+    color: var(--primary-color);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+.page-wrapper {
+    background-color: var(--bg-light);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow: hidden;
+    animation: fadeIn 1s ease-out;
+}
+
+.header {
+    background-color: var(--bg-light);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.8s ease-out;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 0.5rem;
+}
+
+.brand-section {
+    flex: 0 1 auto;
+    animation: fadeIn 1s ease-out 0.3s backwards;
+}
+
+.brand-name {
+    font-family: 'Joti One', cursive;
+    color: var(--text-dark);
+    font-size: 1.2rem;
+    transition: color var(--transition-speed) ease;
+}
+
+.brand-name:hover {
+    color: var(--primary-color);
+}
+
+.nav-section {
+    flex: 1 1 auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    list-style: none;
+    animation: fadeIn 1s ease-out 0.5s backwards;
+}
+
+.nav-item {
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: all var(--transition-speed) ease;
+    position: relative;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width var(--transition-speed) ease;
+}
+
+.nav-item:hover::after,
+.nav-item:focus::after {
+    width: 100%;
+}
+
+.contact-btn {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-speed) ease;
+    animation: pulse 2s infinite;
+}
+
+.contact-btn:hover,
+.contact-btn:focus {
+    background-color: #0052cc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section {
+    background-color: var(--bg-light-gray);
+    padding: 4rem 1rem;
+    text-align: center;
+    animation: fadeIn 1s ease-out 0.7s backwards;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    animation: float 6s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform var(--transition-speed) ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+}
+
+.profile-name {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease-out 0.9s backwards;
+}
+
+.profile-alias {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 2rem;
+    animation: fadeIn 1s ease-out 1.1s backwards;
+}
+
+.content-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    animation: fadeIn 1s ease-out 1.3s backwards;
+}
+
+/* Nouvelles règles pour améliorer l'interlignage et l'espacement */
+.content-section h3 {
+    margin-bottom: 1rem; /* Espacement après chaque titre de sous-section */
+    font-size: 1.8rem; /* Rendre les sous-titres un peu plus grands */
+    color: var(--primary-color); /* Optionnel : changer la couleur pour les distinguer */
+}
+
+.content-section p.bio-text {
+    margin-bottom: 1.5rem; /* Espacement après chaque paragraphe de texte */
+    line-height: 1.8; /* Augmenter l'interlignage pour une meilleure lisibilité */
+    text-align: justify; /* Justifier le texte pour un aspect plus propre */
+}
+
+
+.tagline {
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    animation: fadeIn 1s ease-out 1.5s backwards;
+}
+
+.bio-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+    animation: fadeIn 1s ease-out 1.7s backwards;
+}
+
+.platforms-section {
+    background-color: var(--bg-gray);
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: nowrap;
+    animation: slideIn 1s ease-out;
+    overflow: hidden;
+}
+
+.platform-logo {
+    max-width: 200px;
+    height: 60px;
+    object-fit: contain;
+    transition: all var(--transition-speed) ease;
+    filter: grayscale(100%);
+    animation: slideLeftRight 3s ease-in-out infinite;
+}
+
+.platform-logo:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.platform-logo:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.platform-logo:hover {
+    filter: grayscale(0%);
+    transform: translateY(-5px);
+}
+
+.footer {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    animation: fadeIn 1s ease-out;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .profile-name {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 1.5rem;
+    }
+
+    .bio-text {
+        font-size: 1rem;
+    }
+
+    .platforms-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .platform-logo {
+        max-width: 150px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .platform-logo {
+        max-width: 120px;
+        height: 36px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

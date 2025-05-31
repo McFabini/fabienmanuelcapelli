@@ -1,0 +1,372 @@
+/* Réinitialisation des marges et paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* S'assurer que body et html prennent toute la hauteur et largeur */
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+/* Page wrapper pour prendre toute la largeur */
+.page-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Réinitialiser marges et paddings dans les sections principales */
+header, footer, .pricing-container, .pricing-hero {
+    margin: 0;
+    padding: 0;
+}
+
+a.btn {
+    display: inline-block; /* S'assurer que le lien se comporte comme un bouton */
+    background-color: rgb(0, 105, 255); /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte */
+    padding: 12px 24px; /* Espacement intérieur */
+    text-decoration: none; /* Retirer le soulignement */
+    border-radius: 8px; /* Bords arrondis */
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 20px; /* Espacement à gauche */
+    transition: background-color 0.3s ease; /* Effet au survol */
+    visibility: visible; /* S'assurer que le bouton est visible */
+    opacity: 1; /* Assurer une bonne visibilité */
+}
+
+a.btn:hover {
+    background-color: rgb(0, 85, 210); /* Changer la couleur au survol */
+}
+
+a.btn:focus {
+    outline: 3px solid rgb(0, 105, 255); /* Contour quand il est sélectionné */
+    outline-offset: 2px;
+}
+
+a.btn {
+    display: inline-block;
+    background-color: rgb(0, 105, 255);
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 18px;
+    margin-left: 20px;
+    transition: background-color 0.3s ease;
+    visibility: visible;
+    opacity: 1;
+    max-width: 120px;  /* Limiter la largeur */
+    white-space: nowrap;  /* Empêcher le texte de se couper sur plusieurs lignes */
+    text-overflow: ellipsis; /* Ajouter une ellipse si le texte est trop long */
+    overflow: hidden;
+}
+
+.pricing-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.pricing-hero {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    padding: 120px 40px;
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.pricing-content {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricing-grid {
+    width: 100%;
+}
+
+.pricing-row {
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.pricing-col-wide {
+    display: flex;
+    flex-direction: column;
+    width: 68%;
+}
+
+.pricing-plans {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.plans-container {
+    gap: 30px;
+    display: flex;
+}
+
+.plan-col {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.plan-card {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+}
+
+.plan-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.plan-type {
+    font-size: 24px;
+    font-weight: 600;
+    color: rgb(10, 42, 66);
+    margin: 0;
+}
+
+.plan-price {
+    font-size: 48px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    margin: 15px 0;
+}
+
+.plan-subtitle {
+    font-size: 16px;
+    color: rgb(10, 42, 66);
+    margin: 0;
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.plan-features li {
+    margin: 10px 0;
+    padding: 5px 0;
+}
+
+.cta-button {
+    align-self: center;
+    min-width: 160px;
+    border-radius: 8px;
+    background-color: rgb(0, 105, 255);
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 12px 24px;
+    margin-top: auto;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: rgb(0, 85, 210);
+}
+
+.cta-button:focus {
+    outline: 3px solid rgb(0, 105, 255);
+    outline-offset: 2px;
+}
+
+.verification-text {
+    font-size: 14px;
+    color: rgb(102, 102, 102);
+    text-align: center;
+    margin-top: 15px;
+}
+
+.beatstars-section {
+    font-size: 32px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin: 40px 0;
+}
+
+.beatstars-button {
+    min-width: 200px;
+    border-radius: 8px;
+    background-color: rgb(0, 105, 255);
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.beatstars-button:hover {
+    background-color: rgb(0, 85, 210);
+}
+
+.platforms-section {
+    background-color: rgb(78, 76, 76);
+    display: flex;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.platform-logo {
+    max-height: 60px;
+    width: auto;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.logo-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.platform-logo:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.footer {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+@media (max-width: 1200px) {
+    .pricing-hero {
+        padding: 80px 20px;
+    }
+    
+    .pricing-row {
+        flex-direction: column;
+    }
+    
+    .pricing-col-wide {
+        width: 100%;
+    }
+    
+    .plans-container {
+        flex-direction: column;
+    }
+    
+    .plan-card {
+        margin-bottom: 30px;
+    }
+    
+    .plan-price {
+        font-size: 36px;
+    }
+    
+    .platforms-section {
+        padding: 20px;
+        gap: 30px;
+    }
+    
+    .platform-logo {
+        max-height: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-hero {
+        padding: 60px 15px;
+    }
+    
+    .plan-type {
+        font-size: 20px;
+    }
+    
+    .plan-price {
+        font-size: 32px;
+    }
+    
+    .plan-features {
+        font-size: 16px;
+    }
+    
+    .beatstars-section {
+        font-size: 24px;
+    }
+    
+    .cta-button,
+    .beatstars-button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .logo-animation {
+        animation: none;
+    }
+    
+    .plan-card,
+    .cta-button,
+    .beatstars-button,
+    .platform-logo {
+        transition: none;
+    }
+}
