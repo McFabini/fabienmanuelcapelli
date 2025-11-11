@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi sono - Fabien Manuel Capelli</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="../menu.css" />
+    <link rel="stylesheet" href="../style/about.css" />
+    <link rel="stylesheet" href="../languages-selectors.css" />
+</head>
+<body>
+
+<!-- Selettore lingua -->
+<div class="language-selector" style="position: fixed; top: 20px; right: 20px; z-index: 2000;">
+    <select id="languageSelect">
+        <option value="/pages/about.html">🇬🇧 EN</option>
+        <option value="/translations/about-fr.html">🇫🇷 FR</option>
+        <option value="/translations/about-it.html">🇮🇹 IT</option>
+        <option value="/translations/about-es.html">🇪🇸 ES</option>
+    </select>
+</div>
+
+<!-- Contenitore principale -->
+<div class="main-container">
+    <!-- Menu -->
+    <nav class="menu-box">
+        <div class="menu-container">
+            <span class="menu-toggle">&#9776;</span> <!-- Hamburger -->
+            <ul class="menu-list">
+                <li><a href="/translations/index-it.html">Home</a></li>
+                <li><a href="/translations/about-it.html">Chi sono</a></li>
+                <li class="has-submenu">
+                    <a href="../index.html#pricing">Prezzi</a>
+                    <ul class="submenu">
+                        <li><a href="/translations/midi-compositions-it.html">Composizioni MIDI</a></li>
+                        <li><a href="/translations/orchestral-compositions-it.html">Composizioni orchestrali</a></li>
+                    </ul>
+                </li>
+                <li><a href="/translations/medias-it.html">Media</a></li>
+                <li class="has-submenu">
+                    <a href="../index.html#platforms">Piattaforme</a>
+                    <ul class="submenu">
+                        <li><a href="https://www.egge-verlag.de/index.php?option=com_virtuemart&view=productdetails&virtuemart_product_id=831&virtuemart_category_id=1&Itemid=14" target="_blank" rel="noopener noreferrer">Egge Verlag</a></li>
+                        <li><a href="https://www.beatstars.com/mcfabinibeats" target="_blank" rel="noopener noreferrer">BeatStars</a></li>
+                    </ul>
+                </li>
+                <li><a href="/translations/contact-it.html">Contatti</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Foto principale -->
+    <div class="img"></div>
+
+    <!-- Testi principali -->
+    <span class="text-4">Fabien Manuel Capelli</span>
+    <span class="text-5">McFabini</span>
+
+    <!-- Gruppo biografia -->
+    <div class="group">
+        <div class="box">
+            <span class="text">Chi sono</span>
+            <span class="text-2">“No music, no life”</span>
+            <span class="text-3">
+                Nato nel 2007 nella regione del Giura francese, Fabien Capelli
+                (nome di registrazione) o Fabien Manuel Capelli (nome civile) è
+                immerso nella musica fin da piccolo. Ha iniziato a suonare il fagotto a sette
+                anni con sua madre, studiando contemporaneamente formazione musicale
+                e canto corale al Conservatorio di Saint-Claude. Appassionato di musica
+                d’insieme, è membro di diverse orchestre amatoriali e suona
+                regolarmente con i genitori e le sorelle.<br /><br />
+                Fa parte dell’ensemble ABCD&M, che riunisce
+                fagottisti della regione Borgogna-Franca Contea. Ha ottenuto il 6° posto
+                nella sua categoria al Concours Jeunes Vents Bassons 2019 a Mulhouse.
+                Dopo un anno nella classe di Patrick Vilaire al CRR Chalon sur
+                Saône, ha frequentato la classe di Damien Rose al CRR Besançon a settembre
+                2022.<br /><br />
+                Le sue altre passioni includono il repertorio jazz e l’improvvisazione,
+                la composizione MIDI e la direzione d’orchestra.<br /><br />
+                Ha studiato direzione con Jean-François Verdier, Pierre Walter,
+                Thibault Back de Savigny, Laurent Comte, Marc Hajjar, e studierà
+                con il suo nuovo insegnante Joël Soichez.<br /><br />
+                Ha studiato musica assistita da computer con Thibault Raquin, noto come
+                “Paddy Smith”, dal 2019 al 2022 presso il Conservatorio Intercomunale
+                di Saint-Claude. Ora studierà con Sebastien Descamps presso il
+                Conservatorio Regionale di Besançon.<br /><br />
+                Ha studiato con sua madre per 8 anni e ha ottenuto un certificato
+                in studi musicali.<br /><br />
+                Dal 2023 segue lezioni con Sophie Landemore, docente di
+                scrittura (armonia, orchestrazione, cultura e analisi).
+            </span>
+        </div>
+    </div>
+
+    <!-- Spacer per spingere i footer verso il basso -->
+    <div class="spacer"></div>
+</div>
+
+<!-- Footer grigio principale -->
+<div class="section">
+    <div class="img-2"></div>
+    <div class="pic"></div>
+    <div class="img-3"></div>
+</div>
+
+<!-- Footer nero secondario -->
+<div class="section-2">
+    <span class="text-6">© 2025 - Sviluppato da Fabien Manuel Capelli</span>
+</div>
+
+<script src="../menu.js" defer></script>
+
+<!-- Script per selettore lingua -->
+<script>
+const select = document.getElementById('languageSelect');
+const currentPage = window.location.pathname.split("/").pop();
+
+// Scorre tutte le opzioni e seleziona quella corrispondente alla pagina corrente
+for (let i = 0; i < select.options.length; i++) {
+    if (select.options[i].value.endsWith(currentPage)) {
+        select.selectedIndex = i;
+        break;
+    }
+}
+
+// Reindirizzamento alla pagina corrispondente quando si cambia lingua
+select.addEventListener('change', () => {
+    window.location.href = select.value;
+});
+</script>
+
+</body>
+</html>

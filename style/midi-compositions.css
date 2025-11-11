@@ -1,0 +1,870 @@
+:root {
+    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+        "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+    /* restore strong title styling */
+    font-family: 'Inria Sans', Inter, var(--default-font-family);
+    font-size: clamp(28px, 4vw, 48px);
+}
+
+.group-4 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 12px auto 0 auto;
+    position: relative;
+    background: #ffffff;
+    border: 1.2px solid rgba(22, 22, 22, 0.15);
+    z-index: 5;
+    border-radius: 8px;
+}
+
+/* Page background: set the main page background to site green while the
+   central rectangle (.box) stays light gray per design request. */
+.main-container {
+    background: #9ec6a2; /* site green */
+    padding: 200px 20px 0 20px; /* match about.html spacing to push content down; bottom removed so green touches rectangle */
+    min-height: 100vh;
+    margin-bottom: 0; /* ensure no gap between main and footer */
+}
+.text-f {
+    /* small pricing note placed under the Premium Buy button */
+    display: block;
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 8px auto 0 auto; /* centered under the buy button */
+    color: #0a2942;
+    font-family: Inter, var(--default-font-family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+    z-index: 37;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 6;
+}
+
+
+/* stronger, context-specific rule to ensure the small pricing note is not bold */
+.box .text-f, .wrapper-4 .text-f {
+    font-size: 12px;
+    font-weight: 400 !important;
+    font-style: normal;
+    color: #0a2942;
+}
+/* Menu visuals are handled by shared menu.css to keep parity with index.html */
+
+/* Platforms row inside the gray rectangle */
+.platforms-inline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 18px;
+}
+
+.platforms-inline .img-2,
+.platforms-inline .pic,
+.platforms-inline .img-3 {
+    width: auto;
+    max-width: 320px;
+    height: 88px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.section {
+    position: relative;
+    width: 100%;
+    margin: 12px 0 0 0;
+    z-index: 32;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    /* stretch children so the three rectangles match heights */
+    align-items: stretch;
+    /* center the three rectangles within the gray box */
+    justify-content: center;
+}
+
+/* prevent platforms/footer from overlapping -- make sure there's spacing below */
+.wrapper-7 {
+    margin-top: 18px;
+    padding-top: 36px; /* allow the background image to breathe */
+    padding-bottom: 36px;
+}
+.wrapper-8 {
+    margin-top: 12px;
+}
+.button-platform-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    background: #9ec6a2; /* site green */
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: Inria Sans, var(--default-font-family);
+    height: 40px;
+}
+.button-platform-cta:hover {
+    filter: brightness(0.95);
+}
+
+/* Override index absolute .button positioning inside the MIDI page so it flows in the layout */
+.group-4 .button {
+    position: relative !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 9.6px !important;
+    width: min(167px, 22vw) !important;
+    height: 46px !important;
+    padding: 7.2px 14.4px !important;
+    background: #ffffff !important;
+    border: 1.2px solid rgba(22,22,22,0.15) !important;
+    border-radius: 7.2px !important;
+    transform: none !important;
+}
+.group-4 .external-icon { margin-right: 8px; }
+.group-4 .learn-more { font-size: 18px; font-weight: 700; }
+.wrapper {
+    position: relative;
+    width: clamp(220px, 30%, 360px);
+    min-height: 320px;
+    background: #efbdbd;
+    z-index: 2;
+    border-radius: 22px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.wrapper-2 {
+    position: relative;
+    width: 100%;
+    margin-top: 12px;
+    font-family: Inter, var(--default-font-family);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+    z-index: 23;
+}
+
+/* Plan blocks placed inside each rectangle */
+.plan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-top: 0;
+    padding: 10px 12px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 10px;
+    width: 100%;
+}
+/* Ensure Premium plan text matches Student/Basic styles and allows wrapping */
+.plan .text-16,
+.plan .text-17,
+.plan .text-18 {
+    text-align: center;
+    white-space: normal;
+}
+.plan .text-16 { /* heading */
+    font-size: 18px;
+    font-weight: 700;
+    color: #0a2942;
+}
+.plan .text-17 { /* price */
+    font-size: 24px;
+    font-weight: 700;
+    color: #000000;
+}
+.plan .text-18 { /* conditions */
+    font-size: 12px;
+    color: #334155;
+}
+.plan .text-13,
+.plan .text-10 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0a2942;
+}
+.plan .text-14,
+.plan .text-11 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000000;
+}
+.plan .text-15,
+.plan .text-12 {
+    font-size: 12px;
+    color: #334155;
+}
+.text-2 {
+    position: relative;
+    color: #0a2942;
+    font-family: Inter, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+}
+.text-3 {
+    position: relative;
+    color: #0a2942;
+    font-family: Inter, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+}
+.text-4 {
+    position: relative;
+    color: #0a2942;
+    font-family: Inter, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+}
+.group {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9.6px;
+    margin: 12px auto 0 auto;
+    padding: 7.2px 14.4px;
+    background: #ffffff;
+    border: 1.2px solid rgba(22, 22, 22, 0.15);
+    z-index: 14;
+    border-radius: 7.2px;
+    /* width driven by shared variable so other buttons match the first */
+    width: var(--buy-width);
+    height: 46px; /* match index button size */
+    font-size: 15px;
+    position: relative; /* ensure inline flow */
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.pic {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background: url(./assets/images/6c76fa71-a7af-4dfd-accc-1c70e5cd0961.svg)
+        no-repeat center;
+    background-size: contain;
+    z-index: 16;
+}
+.text-5 {
+    position: relative;
+    color: #000000;
+    font-family: Inria Sans, var(--default-font-family);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 15;
+}
+.text-6 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    width: 243px;
+    height: 49px;
+    margin: 17px 0 0 73px;
+    color: #000000;
+    font-family: Inter, var(--default-font-family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: center;
+    z-index: 24;
+}
+.group-2 {
+    width: clamp(220px, 30%, 360px);
+    min-height: 320px;
+    background: #efbdbd;
+    z-index: 3;
+    border-radius: 22px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.wrapper-3 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 12px 0 0 0;
+    font-family: Inter, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+    z-index: 30;
+}
+.text-7 {
+    position: relative;
+    color: #0a2942;
+    font-family: Inter, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+}
+.text-8 {
+    position: relative;
+    color: #0a2942;
+    font-family: Inter, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+}
+.text-9 {
+    position: relative;
+    color: #0a2942;
+    font-family: Inter, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+}
+.group-3 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9.6px;
+    width: auto;
+    height: 46px;
+    margin: 12px 0 0 0;
+    padding: 7.2px 14.4px;
+    background: #ffffff;
+    border: 1.2px solid rgba(22, 22, 22, 0.15);
+    z-index: 11;
+    border-radius: 7.2px;
+    /* width driven by shared variable so other buttons match the first */
+    width: var(--buy-width);
+    font-size: 15px;
+    position: relative;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+    margin: 12px auto 0 auto; /* center */
+}
+.pic-2 {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background: url(./assets/images/4ed4bbe7-7f15-43b6-90ce-b22019539993.svg)
+        no-repeat center;
+    background-size: contain;
+    z-index: 13;
+}
+.text-a {
+    position: relative;
+    color: #000000;
+    font-family: Inria Sans, var(--default-font-family);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 12;
+}
+
+/* Position the small icon absolutely inside the button so the label can be
+   perfectly centered. This affects the second and third Buy buttons. */
+.group-3 .pic-2,
+.box-3 .img {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.group-3 .text-a,
+.box-3 .text-e {
+    display: block;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+}
+.wrapper-4 {
+    width: clamp(220px, 30%, 360px);
+    min-height: 320px;
+    background: #efbdbd;
+    z-index: 4;
+    border-radius: 22px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.box-2 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 12px 0 0 0;
+    font-family: Inter, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+    text-overflow: initial;
+    white-space: nowrap;
+    z-index: 36;
+}
+.text-b {
+    position: relative;
+    color: #0a2942;
+    font-family: Inter, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+}
+.text-c {
+    position: relative;
+    color: #0a2942;
+    font-family: Inter, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+}
+.text-d {
+    position: relative;
+    color: #0a2942;
+    font-family: Inter, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: center;
+}
+.box-3 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9.6px;
+    width: auto;
+    height: 46px;
+    margin: 12px 0 0 0;
+    padding: 7.2px 14.4px;
+    background: #ffffff;
+    border: 1.2px solid rgba(22, 22, 22, 0.15);
+    z-index: 8;
+    border-radius: 7.2px;
+    /* width driven by shared variable so other buttons match the first */
+    width: var(--buy-width);
+    font-size: 15px;
+    position: relative;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+    margin: 12px auto 0 auto; /* center */
+}
+.img {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background: url(./assets/images/9ac25ac1-68f9-470f-90f9-8806a1a425d6.svg)
+        no-repeat center;
+    background-size: contain;
+    z-index: 10;
+}
+.text-e {
+    position: relative;
+    color: #000000;
+    font-family: Inria Sans, var(--default-font-family);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 9;
+}
+.text-f {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    width: 243px;
+    height: 49px;
+    margin: 15px 0 0 75px;
+    color: #000000;
+    font-family: Inter, var(--default-font-family);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: center;
+    z-index: 37;
+.group-4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 12px auto 0 auto;
+    padding: 6px 12px;
+    background: transparent; /* let the green box background show through */
+    border: none;
+    z-index: 5;
+    border-radius: 8px;
+    height: 40px;
+    min-width: 100px;
+    font-size: 15px;
+}
+.pic-3 {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    background: url('/images/imageside.png')
+        no-repeat center;
+    background-size: contain;
+    z-index: 7;
+}
+.text-1a {
+    position: relative;
+    color: #000000;
+    font-family: Inria Sans, var(--default-font-family);
+    font-size: 12px; /* smaller */
+    font-weight: 400; /* not bold */
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 6;
+}
+    min-width: 0;
+    height: 58px;
+    color: #000000;
+    font-family: Inter, var(--default-font-family);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58px;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 28;
+}
+.text-12 {
+    align-self: stretch;
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    min-width: 0;
+    height: 24px;
+    color: #0a2942;
+    font-family: Inter, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 29;
+}
+.wrapper-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 24px;
+    position: absolute;
+    width: 473px;
+    height: 159px;
+    top: 36px;
+    left: 0;
+    z-index: 18;
+}
+.text-13 {
+    align-self: stretch;
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    min-width: 0;
+    height: 29px;
+    color: #0a2942;
+    font-family: Inter, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 19;
+}
+.text-14 {
+    align-self: stretch;
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    min-width: 0;
+    height: 58px;
+    color: #000000;
+    font-family: Inter, var(--default-font-family);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58px;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 20;
+}
+.text-15 {
+    align-self: stretch;
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    min-width: 0;
+    height: 24px;
+    color: #0a2942;
+    font-family: Inter, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 21;
+}
+.wrapper-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 24px;
+    position: absolute;
+    width: 473px;
+    height: 159px;
+    top: 36px;
+    left: 932px;
+    z-index: 32;
+}
+.text-16 {
+    align-self: stretch;
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    min-width: 0;
+    height: 29px;
+    color: #0a2942;
+    font-family: Inter, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 33;
+}
+.text-17 {
+    align-self: stretch;
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    min-width: 0;
+    height: 58px;
+    color: #000000;
+    font-family: Inter, var(--default-font-family);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58px;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 34;
+}
+.text-18 {
+    align-self: stretch;
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    min-width: 0;
+    height: 24px;
+    color: #0a2942;
+    font-family: Inter, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 35;
+}
+.text-19 {
+    display: block;
+    width: 100%;
+    color: #000000;
+    font-family: Inter, var(--default-font-family);
+    font-size: clamp(18px, 2.5vw, 32px);
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    margin: 18px 0 0 0;
+    z-index: 38;
+}
+.group-4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9.6px;
+    margin: 12px auto 0 auto;
+    padding: 7.2px 14.4px;
+    background: #ffffff;
+    border: 1.2px solid rgba(22, 22, 22, 0.15);
+    z-index: 5;
+    border-radius: 7.2px;
+}
+.pic-3 {
+    flex-shrink: 0;
+    position: absolute;
+    width: 19.2px;
+    height: 19.2px;
+    top: 12.2px;
+    left: 12.7px;
+    background: url(./assets/images/1b148630-71a9-4bdf-a2de-05b88600c192.svg)
+        no-repeat center;
+    background-size: cover;
+    z-index: 7;
+}
+.text-1a {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: absolute;
+    width: 113px;
+    height: 28px;
+    top: 8.8px;
+    left: 43.8px;
+    color: #000000;
+    font-family: Inria Sans, var(--default-font-family);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 6;
+}
+.wrapper-7 {
+    /* platforms area: logos live here so the green background (.main-container)
+       sits directly behind the rectangle and the platforms */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+    height: 170px; /* same as index */
+    padding: 0 24px;
+    margin: 0; /* flush with .box */
+    background: transparent;
+}
+
+.wrapper-8 {
+    /* Main footer block (gray) sized like about.html.section */
+    width: 100vw;
+    background: #4d4b4b; /* dark gray like about.html */
+     /* keep the gray block flush with the green area (no top gap) but ensure the
+         logos are vertically centered inside a fixed area similar to About page */
+     padding: 0 20px; /* no extra top padding so gray sits against green */
+     margin-top: 0; /* ensure no gap above */
+     min-height: 170px; /* provide vertical space so logos can be centered */
+    display: flex;
+    align-items: center; /* vertical centering of logos inside the gray block */
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    z-index: 43;
+}
+
+.wrapper-9 {
+    /* Secondary black footer band (like about.html.section-2) */
+    width: 100vw;
+    background: #000;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 44;
+}
+.img-2, .pic, .img-3 {
+    width: 20%;
+    max-width: 500px;
+    height: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.img-2 { background-image: url(../public/636a4d63dae2e9668b947fd1_BEATSTARS\ LOGO\ -\ COLOR\ LIGHT\ 1.png); height: 115px; }
+.pic { background-image: url(../public/screenshot20241230at14463611372-eb5r-200h.png); height: 115px; }
+.img-3 { background-image: url(../public/logosacem202012333-k39-200h.png); height: 115px; }
+
+/* Pricing note (use same visual as .text-f but centered and slightly raised) */
+.pricing-note {
+    /* Prominent page label — use the previous "big" note styling and center it */
+    display: block;
+    text-align: center;
+    font-size: clamp(20px, 3.5vw, 32px);
+    font-weight: 700;
+    color: #0a2942;
+    margin: 0 0 12px 0; /* spacing below heading */
+}
+.text-1b {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-shrink: 0;
+    flex-basis: auto;
+    position: relative;
+    width: 530px;
+    height: 18px;
+    color: #ffffff;
+    font-family: Inter, var(--default-font-family);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 44;
+}
+
+/* Page-specific fixes: ensure the CTA is centered under the Selling beats section,
+   remove the long white container, and tighten footer spacing. */
+.group-4 {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 12px auto 0 auto !important;
+    height: auto !important;
+}
+
+/* Local CTA that intentionally does NOT use the global .button class to avoid
+   index-wide absolute positioning. Centered and styled to match the homepage
+   button look but scoped for this page. */
+.midi-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: min(167px, 22vw);
+    height: 46px;
+    padding: 7px 14px;
+    background: #ffffff;
+    border: 1.2px solid rgba(22,22,22,0.15);
+    border-radius: 8px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 700;
+    font-family: Inria Sans, Inter, var(--default-font-family);
+    margin: 0 auto; /* center inside .group-4 */
+}
+.midi-cta .external-icon { margin-right: 8px; }
+.midi-cta .learn-more { font-size: 18px; font-weight: 700; }
+
+/* Hover/press animation similar to index buttons for buy buttons */
+.group:hover, .group-3:hover, .box-3:hover, .midi-cta:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 10px 20px rgba(16, 24, 40, 0.08);
+}
+.group:active, .group-3:active, .box-3:active, .midi-cta:active {
+    transform: translateY(-1px) scale(0.995);
+}

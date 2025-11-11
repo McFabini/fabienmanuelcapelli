@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medias</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface:wght@400&display=swap" />
+    <link rel="stylesheet" href="/index.css" />
+    <link rel="stylesheet" href="/style/medias.css" />
+    <link rel="stylesheet" href="/languages-selectors.css" />
+    <link rel="stylesheet" href="/menu.css" />
+</head>
+<body>
+    <!-- Sélecteur de langues -->
+    <div class="language-selector" style="position: fixed; top: 20px; right: 20px; z-index: 2000;">
+        <select id="languageSelect">
+            <option value="/pages/medias.html">🇬🇧 EN</option>
+            <option value="/translations/medias-fr.html">🇫🇷 FR</option>
+            <option value="/translations/medias-it.html">🇮🇹 IT</option>
+            <option value="/translations/medias-es.html">🇪🇸 ES</option>
+        </select>
+    </div>
+<script src="/menu.js" defer></script>
+    <!-- Menu -->
+    <nav class="menu-box">
+      <div class="menu-container">
+        <span class="menu-toggle">&#9776;</span> <!-- Hamburger -->
+        <ul class="menu-list">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/pages/about.html">About</a></li>
+          <li class="has-submenu">
+            <a href="#pricing">Pricing</a>
+            <ul class="submenu">
+              <li><a href="/pages/midi-compositions.html">MIDI Compositions</a></li>
+              <li><a href="/pages/orchestral-compositions.html">Orchestral Compositions</a></li>
+            </ul>
+          </li>
+          <li><a href="#medias">Medias</a></li>
+          <li class="has-submenu">
+            <a href="#platforms">Platforms</a>
+            <ul class="submenu">
+              <li><a href="https://www.egge-verlag.de/index.php?option=com_virtuemart&view=productdetails&virtuemart_product_id=831&virtuemart_category_id=1&Itemid=14" target="_blank" rel="noopener noreferrer">Egge Verlag</a></li>
+              <li><a href="https://www.beatstars.com/mcfabinibeats" target="_blank" rel="noopener noreferrer">BeatStars</a></li>
+            </ul>
+          </li>
+          <li><a href="/pages/contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <div class="main-container">
+
+        <!-- Texte principal -->
+        <div class="text">MEDIAS</div>
+
+        <!-- Images -->
+        <div class="pic"></div>
+        <div class="pic-2"></div>
+        <div class="img"></div>
+        <div class="pic-3"></div>
+        <div class="pic-4"></div>
+
+    </div>
+
+    <!-- Footer gris et noir -->
+    <footer class="footer">
+      <div class="footer-bg"></div>
+      <div class="footer-grid">
+        <div class="footer-left">
+          <p class="footer-name">Fabien Manuel Capelli</p>
+          <p class="footer-phone">+33 7 49 43 75 77</p>
+          <p class="footer-email">contact@fabienmanuelcapelli.com</p>
+        </div>
+        <div class="footer-center">
+          <p class="footer-location">
+            25000 Besançon<br>
+            39260 Crenans<br>
+            Bourgogne-Franche-Comté<br>
+            FR
+          </p>
+        </div>
+        <div class="footer-right">
+          <a href="/pages/cgu.html" class="footer-link">CGU</a>
+          <p class="footer-copyright">© 2025 - V2 - Fabien Manuel Capelli</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/menu.js" defer></script>
+    <script>
+        // Script pour le changement de langue
+        const select = document.getElementById('languageSelect');
+        select.addEventListener('change', () => {
+            window.location.href = select.value;
+        });
+    </script>
+</body>
+</html>

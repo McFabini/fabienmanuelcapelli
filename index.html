@@ -1,169 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Official website of music artist Fabien Manuel Capelli - McFabini">
-    <title>Fabien Manuel Capelli - Music Artist</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Joti+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style/index.css"> </head>
-    <link rel="stylesheet" href="menu.css"> </head>
-<body>
-    <div class="page-wrapper">
-        <header class="header" role="banner">
-            <div class="header-container">
-                <div class="brand-section">
-                    <img src="https://upload.skybot.fr/uploads/67e1a94ca420f9.65825251.png" alt="Description de l'image" class="brand-image" width="108.75" height="46.75">
-                </div>
-                <nav class="nav-section" role="navigation" aria-label="Main navigation">
-                    <ul class="nav-links">
-                        <li><a href="index.html" class="nav-item">Home</a></li>
-                        <li><a href="pages/about.html" class="nav-item">About me</a></li>
-                        <li><a href="pages/services.html" class="nav-item">Services</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle">Platforms</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="https://egge-verlag.de/index.php?option=com_virtuemart&view=productdetails&virtuemart_product_id=831&virtuemart_category_id=1&Itemid=14" target="_blank" rel="noopener noreferrer" class="dropdown-item">Egge Verlag</a></li>
-                                <li><a href="https://www.beatstars.com/mcfabinibeats" target="_blank" rel="noopener noreferrer" class="dropdown-item">BeatStars</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <a href="mailto:contact@fabienmanuelcapelli.com?subject=Contact%20Request&body=Hello%20Fabien,%20I%20would%20like%20to%20get%20in%20touch."
-                class="btn" aria-label="Contact me">Contact</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fabien Manuel Capelli</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Antonio:wght@400&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;700&display=swap" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="menu.css" />
+    <link rel="stylesheet" href="languages-selectors.css" />
+    
+  </head>
+  <body>
+    <div class="language-selector" style="position: fixed; top: 20px; right: 20px; z-index: 2000;">
+  <select id="languageSelect" onchange="changeLanguage(this.value)">
+        <option value="index.html">🇬🇧 EN</option>
+        <option value="/translations/index-fr.html">🇫🇷 FR</option>
+        <option value="/translations/index-it.html">🇮🇹 IT</option>
+        <option value="/translations/index-es.html">🇪🇸 ES</option>
+  </select>
+  <script>
+  const select = document.getElementById('languageSelect');
+  select.addEventListener('change', () => {
+    window.location.href = select.value;
+  });
+</script>
+</div>
+    <div class="main-container">
+    <!-- Menu -->
+<nav class="menu-box">
+  <div class="menu-container">
+    <span class="menu-toggle">&#9776;</span> <!-- Hamburger -->
+    <ul class="menu-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="/pages/about.html">About</a></li>
+      <li class="has-submenu">
+        <a href="#pricing">Pricing</a>
+        <ul class="submenu">
+          <li><a href="/pages/midi-compositions.html">MIDI Compositions</a></li>
+          <li><a href="/pages/orchestral-compositions.html">Orchestral Compositions</a></li>
+        </ul>
+      </li>
+      <li><a href="/pages/medias.html">Medias</a></li>
+      <li class="has-submenu">
+        <a href="#platforms">Platforms</a>
+        <ul class="submenu">
+          <li><a href="https://www.egge-verlag.de/index.php?option=com_virtuemart&view=productdetails&virtuemart_product_id=831&virtuemart_category_id=1&Itemid=14" target="_blank" rel="noopener noreferrer">Egge Verlag</a></li>
+          <li><a href="https://www.beatstars.com/mcfabinibeats" target="_blank" rel="noopener noreferrer">BeatStars</a></li>
+        </ul>
+      </li>
+      <li><a href="/pages/contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+    
+      <div class="sub-content">
+  </div>
+</nav>
+    </div>
+        <div class="image"></div>
+         <div class="rectangle-1"></div>
+        <a href="./pages/about.html" class="button" aria-label="Learn more about Fabien Manuel Capelli">
+          <div class="external-icon" aria-hidden="true"></div>
+          <span class="learn-more">Learn More</span>
+        </a>
+        <div class="rectangle-2"></div>
+        <span class="description"
+          >Composer, Conductor, Bassoonist,<br />Film Director,<br />Screenwriter</span
+        >
+        <div class="person">
+          <span class="name">Fabien Manuel <br /></span
+          ><span class="cape">Cape</span><span class="lli">lli</span>
+        </div>
+      </div>
+      <div class="services">
+        <div class="div"></div>
+        <div class="flex-column-c">
+          <div class="makers-text-content">
+            <span class="education-news">News</span
+            ><span class="learn-how-to-make">“I miss you”</span>
+          </div>
+          <span class="education-original-short-film"
+            >an original short film directed <br />by Fabien Manuel
+            Capelli</span
+          >
+          <div class="makers-text-content-3">
+            <div class="learn-how-to-make-4">
+              <span class="date-of-release">Date of release :</span
+              ><span class="nbsp"> <br /></span
+              ><span class="december-4th-2025">December 31th 2025</span>
             </div>
-        </header>
+          </div>
+        </div>
+      </div>
+      <span class="previously">Previously:</span>
+      <div class="flex-row-bc">
+        <div class="journees-fou-de-basson-oyonnax-resized"></div>
+        <div class="affiche-journees-oyonnax-resized"></div>
+        <div class="fou-de-basson-association">
+          <span class="fou-de-basson-association-5"
+            >“Fou de Basson”, founded in 1988, is a French association dedicated
+            to promoting the bassoon and its practice. It brings together all
+            bassoonists, regardless of skill level, and fosters communication
+            between musicians, composers, and enthusiasts. The association
+            organizes concerts, workshops, conferences, and festivals, and
+            supports the creation of new repertoire. It also offers a
+            multilingual website, a forum, a quarterly newsletter, and a media
+            library about the bassoon. The overall goal is to revitalize the
+            bassoon scene in France and preserve its heritage and history.<br /><br /></span
+          ><span class="interpretation-quatuor-ballade"
+            >Interpretation of “4 bassons en ballade” performed by the fou de
+            basson ensemble<br /><br />CRD - Conservatoire du Haut-Bugey 88,
+            cours de Verdun BP 817 01108 Oyonnax<br />FR tél : +33 4 74 81 96
+            90<br /><br /><br /><br
+          /></span>
+        </div>
+      </div>
+      <div class="rectangle-6">
+        <div class="makers-text-content-7">
+          <span class="education">Discography</span
+          ><span class="figma-sites">Latest releases</span>
+        </div>
+        <div class="flex-row">
+          <div class="empty"></div>
+          <div class="midnight-echoes"></div>
+          <div class="house-in-motion"></div>
+        </div>
+        <div class="flex-row-b">
+            <a class="button-8" href="https://www.beatstars.com/mcfabinibeats" target="_blank" rel="noopener noreferrer" aria-label="Listen now on BeatStars">
+              <div class="icon-external" aria-hidden="true"></div>
+              <span class="listen-now">Listen now</span>
+            </a>
+          <a class="button-9" href="https://www.beatstars.com/mcfabinibeats" target="_blank" rel="noopener noreferrer" aria-label="Listen now on BeatStars">
+            <div class="icon-external-a" aria-hidden="true"></div>
+            <span class="listen-now-b">Listen now</span>
+          </a>
+          <a class="button-c" href="https://www.beatstars.com/mcfabinibeats" target="_blank" rel="noopener noreferrer" aria-label="Listen now on BeatStars">
+            <div class="icon-external-d" aria-hidden="true"></div>
+            <span class="listen-now-e">Listen now</span>
+          </a>
+        </div>
+      </div>
+      <div class="services-f">
+        <div class="makers-text-content-10">
+          <span class="education-11">Services</span
+          ><span class="pricing">Pricing</span
+          ><span class="figma-plugin"
+            >*Available on this website and BeatStars</span
+          >
+        </div>
+        <div class="flex-row-ca">
+          <a class="button-12" href="/pages/services.html" aria-label="Learn more about services">
+            <div class="icon-external-13" aria-hidden="true"></div>
+            <span class="learn-more-14">Learn More</span>
+          </a>
+          <a class="button-15" href="https://www.beatstars.com/mcfabinibeats" target="_blank" rel="noopener noreferrer" aria-label="Visit BeatStars">
+            <div class="icon-external-16" aria-hidden="true"></div>
+            <span class="beatstars">BeatStars</span>
+          </a>
+        </div>
+      </div>
+      <div class="rectangle-17">
+        <span class="contact">Contact</span
+        ><span class="mail-contact">
+          Mail : contact@fabienmanuelcapelli.com</span
+        >
+        <a class="button-18" href="mailto:contact@fabienmanuelcapelli.com" aria-label="Email contact">
+          <div class="icon-external-19" aria-hidden="true"></div>
+          <span class="learn-more-1a">Learn More</span>
+        </a>
+      </div>
+      <div class="platforms"></div>
+      <footer class="footer">
+  <div class="footer-bg"></div>
 
-        <main id="main-content" role="main">
-            <section class="hero-section" aria-labelledby="hero-title">
-                <div class="hero-container">
-                    <div class="hero-content">
-                        <div class="social-links" aria-label="Social media links">
-                            <a href="#" class="social-link" aria-label="Visit us on platform 1">
-                                <img src="https://cdn.builder.io/api/v1/image/assets/9a4fc4c991304f5eb40419689f9cc6cc/a52c9ab7efe662e9560b80c6eddbe9dee360badcc45d4826ec4f670373f428dc?apiKey=9a4fc4c991304f5eb40419689f9cc6cc&" alt="" role="presentation">
-                            </a>
-                            <a href="#" class="social-link" aria-label="Visit us on platform 2">
-                                <img src="https://cdn.builder.io/api/v1/image/assets/9a4fc4c991304f5eb40419689f9cc6cc/15e92c405825c0cfe1264f569969c11f2fb1041b3a06d185b6c4b71d38cbc8eb?apiKey=9a4fc4c991304f5eb40419689f9cc6cc&" alt="" role="presentation">
-                            </a>
-                            <a href="#" class="social-link" aria-label="Visit us on platform 3">
-                                <img src="https://cdn.builder.io/api/v1/image/assets/9a4fc4c991304f5eb40419689f9cc6cc/8d57e2df89f183c0f76f3e215d0d1b67c0ef28267422c37070b1d7cd01c5485e?apiKey=9a4fc4c991304f5eb40419689f9cc6cc&" alt="" role="presentation">
-                            </a>
-                        </div>
-                        
-                        <div class="hero-text">
-                            <h1 id="hero-title" class="section-title">McFabini</h1>
-                            <p class="hero-heading">NEW SINGLE!</p>
-                            <p class="hero-description">The last single of 2024</p>
-                        </div>
-                        
-                        <button class="btn" aria-label="Listen to the new single" onclick="window.open('https://push.fm/fl/harmonicdrift', '_blank')">Listen!</button>
-                    </div>
-                    
-                    <img src="https://cdn.builder.io/api/v1/image/assets/9a4fc4c991304f5eb40419689f9cc6cc/273b0655028e765df77d9fa00256c6476b2afe18f366e1f0e90c616ace1bf06f?apiKey=9a4fc4c991304f5eb40419689f9cc6cc&" 
-                         alt="New single artwork cover" 
-                         class="hero-image"
-                         width="616"
-                         height="616">
-                </div>
-            </section>
-
-            <section aria-label="Hero Banner">
-                <h1 class="visually-hidden">Welcome to our website</h1>
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/9a4fc4c991304f5eb40419689f9cc6cc/fd5d64440a35b7652adef6e6a923ab3ce652f96521be72880d6e1572a4bcf70e?apiKey=9a4fc4c991304f5eb40419689f9cc6cc&"
-                  class="banner-image"
-                  alt="Hero banner showcasing our main message"
-                  role="img"
-                />
-            </section>
-
-            <section id="about" class="about-section centered-section" aria-labelledby="about-title">
-                <div class="section-content">
-                    <h2 id="about-title" class="section-title">About Me</h2>
-                    <img src="https://cdn.builder.io/api/v1/image/assets/9a4fc4c991304f5eb40419689f9cc6cc/074c69391b5c758126beee886cfccd1fc2751a7c839f64992f660bcf3047774d?apiKey=9a4fc4c991304f5eb40419689f9cc6cc&" 
-                         alt="Fabien Manuel Capelli portrait" 
-                         width="201"
-                         height="201">
-                    <div class="about-text">
-                        <h3>Fabien Manuel Capelli</h3>
-                        <p>McFabini</p>
-                        <button class="btn" aria-label="Learn more about me" onclick="window.location.href='pages/about.html'">About me</button>
-                    </div>
-                </div>
-            </section>
-
-            <section id="services" class="services-section centered-section" aria-labelledby="services-title">
-                <div class="section-content">
-                    <h2 id="services-title" class="section-title">Services</h2>
-                    <p class="hero-heading">Various services</p>
-                    <p class="hero-description">*Available on this website and BeatStars</p>
-                    <div class="buttons-group">
-                        <button class="btn" aria-label="Pricing" onclick="window.location.href='pages/services.html';">Pricing</button>
-                        <button class="btn" aria-label="Visit BeatStars" onclick="window.open('https://www.beatstars.com/mcfabinibeats', '_blank')" >BeatStars</button>
-                    </div>
-                </div>
-            </section>
-
-            <section id="contact" class="contact-section centered-section" aria-labelledby="contact-title">
-                <div class="section-content">
-                    <h2 id="contact-title" class="section-title">Contact me</h2>
-                    <p>Mail: contact@fabienmanuelcapelli.com</p>
-                    <div class="btn-container">
-                        <a href="mailto:contact@fabienmanuelcapelli.com?subject=Contact%20Request&body=Hello%20Fabien,%20I%20would%20like%20to%20get%20in%20touch." 
-                        class="btn" aria-label="Contact me">Contact</a>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer" role="contentinfo">
-            <p>v1.0.2 © 2025 - Developed by Fabien Manuel Capelli - All rights reserved</p>
-            <p><a href="./pages/cgu.html">Terms of Service</a></p>
-        </footer>
+  <div class="footer-grid">
+    <div class="footer-left">
+      <p class="footer-name">Fabien Manuel Capelli</p>
+      <p class="footer-phone">+33 7 49 43 75 77</p>
+      <p class="footer-email">contact@fabienmanuelcapelli.com</p>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
+    <div class="footer-center">
+      <p class="footer-location">
+        25000 Besançon<br>
+        39260 Crenans<br>
+        Bourgogne-Franche-Comté<br>
+        FR
+      </p>
+    </div>
 
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, observerOptions);
+    <div class="footer-right">
+      <a href="/pages/cgu.html" class="footer-link">CGU</a>
+      <p class="footer-copyright">© 2025 - V2 - Fabien Manuel Capelli</p>
+    </div>
+  </div>
+</footer>
 
-            document.querySelectorAll('.hero-content').forEach(el => {
-                el.classList.add('slide-in-left');
-                observer.observe(el);
-            });
-
-            document.querySelectorAll('.hero-image').forEach(el => {
-                el.classList.add('slide-in-right');
-                observer.observe(el);
-            });
-
-            document.querySelectorAll('.section-content').forEach(el => {
-                el.classList.add('fade-in');
-                observer.observe(el);
-            });
-
-            document.querySelectorAll('.social-link').forEach(el => {
-                el.classList.add('scale-in');
-                observer.observe(el);
-            });
-            
-        });
-    </script>
-</body>
+    <script src="menu.js"></script>
+    <!-- Generated by Codia AI - https://codia.ai/ -->
+  </body>
 </html>

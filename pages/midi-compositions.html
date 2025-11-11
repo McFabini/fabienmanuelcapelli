@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MIDI Compositions</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="../menu.css" />
+    <link rel="stylesheet" href="/style/midi-compositions.css" />
+    <link rel="stylesheet" href="/languages-selectors.css" />
+    <script src="/menu.js" defer></script>  
+</head>
+<body>
+    <!-- Language selector -->
+    <div class="language-selector" style="position: fixed; top: 20px; right: 20px; z-index: 2000;">
+        <select id="languageSelect">
+            <option value="/index.html">🇬🇧 EN</option>
+            <option value="/translations/index-fr.html">🇫🇷 FR</option>
+            <option value="/translations/index-it.html">🇮🇹 IT</option>
+            <option value="/translations/index-es.html">🇪🇸 ES</option>
+        </select>
+    </div>
+    <script>
+        const select = document.getElementById('languageSelect');
+        const currentPage = window.location.pathname.split("/").pop();
+
+        // Detect current file and set the correct language
+        if(currentPage.includes("index-fr.html")) {
+            select.value = "/translations/index-fr.html";
+        } else if(currentPage.includes("index-it.html")) {
+            select.value = "/translations/index-it.html";
+        } else if(currentPage.includes("index-es.html")) {
+            select.value = "/translations/index-es.html";
+        } else {
+            select.value = "/index.html";
+        }
+
+        // Redirect on language change
+        select.addEventListener('change', () => {
+            window.location.href = select.value;
+        });
+    </script>
+
+    <div class="main-container">
+        <!-- Menu -->
+        <nav class="menu-box">
+            <div class="menu-container">
+                <span class="menu-toggle">&#9776;</span>
+                <ul class="menu-list">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/pages/about.html">About</a></li>
+                    <li class="has-submenu">
+                        <a href="#pricing">Pricing</a>
+                        <ul class="submenu">
+                            <li><a href="/pages/midi-compositions.html">MIDI Compositions</a></li>
+                            <li><a href="/pages/orchestral-compositions.html">Orchestral Compositions</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/pages/medias.html">Medias</a></li>
+                    <li class="has-submenu">
+                        <a href="#platforms">Platforms</a>
+                        <ul class="submenu">
+                            <li><a href="https://www.egge-verlag.de/index.php?option=com_virtuemart&view=productdetails&virtuemart_product_id=831&virtuemart_category_id=1&Itemid=14" target="_blank" rel="noopener noreferrer">Egge Verlag</a></li>
+                            <li><a href="https://www.beatstars.com/mcfabinibeats" target="_blank" rel="noopener noreferrer">BeatStars</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <span class="pricing-note">MIDI Compositions Pricing</span>
+
+        <div class="box">
+            <div class="section">
+                <div class="wrapper">
+                    <div class="plan plan-student">
+                        <span class="text-13">STUDENT PLAN*</span>
+                        <span class="text-14">50$ OR 50€</span>
+                        <span class="text-15">CONDITIONS</span>
+                    </div>
+                    <div class="wrapper-2">
+                        <span class="text-2">MIDI COMPOSITION<br /><br />MIX & MASTERING<br /><br />Under 25 years old<br /><br /></span>
+                        <span class="text-3">2 minutes max</span>
+                        <span class="text-4"> per song</span>
+                    </div>
+                    <div class="group">
+                        <a href="/pages/coming-soon.html" class="text-a">Coming soon</a>
+                    </div>
+                    <span class="text-6">valid ID card (ID check)</span>
+                </div>
+
+                <div class="group-2">
+                    <div class="plan plan-basic">
+                        <span class="text-10">BASIC PLAN*</span>
+                        <span class="text-11">120$ OR 120€</span>
+                        <span class="text-12">CONDITIONS</span>
+                    </div>
+                    <div class="wrapper-3">
+                        <span class="text-7">MIDI COMPOSITION<br /><br />MIX & MASTERING<br /><br />4 </span>
+                        <span class="text-8">minutes max</span>
+                        <span class="text-9"> per song</span>
+                    </div>
+                    <div class="group-3">
+                        <div class="pic-2"></div>
+                        <a href="/pages/coming-soon.html" class="text-a">Coming soon</a>
+                    </div>
+                </div>
+
+                <div class="wrapper-4">
+                    <div class="plan plan-premium">
+                        <span class="text-16">PREMIUM PLAN*</span>
+                        <span class="text-17">350$ OR 350€</span>
+                        <span class="text-18">CONDITIONS</span>
+                    </div>
+                    <div class="box-2">
+                        <span class="text-b">MIDI COMPOSITION<br /><br />MIX & MASTERING<br /><br />Content ID*<br /><br />15</span>
+                        <span class="text-c"> minutes max</span>
+                        <span class="text-d"> per song</span>
+                    </div>
+                    <div class="box-3">
+                        <div class="img"></div>
+                        <a href="/pages/coming-soon.html" class="text-a">Coming soon</a>
+                    </div>
+                    <span class="text-f">*if specified</span>
+                </div>
+            </div>
+            <span class="text-19">Selling beats on BeatStars</span>
+            <div class="group-4">
+                <a class="midi-cta" href="https://www.beatstars.com/mcfabinibeats" target="_blank" rel="noopener noreferrer" aria-label="Learn more on BeatStars">
+                    <div class="external-icon" aria-hidden="true"></div>
+                    <span class="learn-more">Learn More</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer blocks -->
+    <div class="wrapper-8">
+        <div class="img-2"></div>
+        <div class="pic"></div>
+        <div class="img-3"></div>
+    </div>
+    <div class="wrapper-9">
+        <span class="text-1b">© 2025 - Developed by Fabien Manuel Capelli</span>
+    </div>
+</body>
+</html>

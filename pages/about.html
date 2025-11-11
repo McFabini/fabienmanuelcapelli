@@ -1,61 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About me</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../style/about.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="../menu.css" />
+    <link rel="stylesheet" href="../style/about.css" />
+    <link rel ="stylesheet" href="../languages-selectors.css" />
 </head>
 <body>
-    <div class="page-wrapper">
-        <header class="header" role="banner">
-            <div class="header-container">
-                <div class="brand-section">
-                    <img src="https://upload.skybot.fr/uploads/67e1a94ca420f9.65825251.png" alt="Description de l'image" class="brand-image" width="108,75" height="46,75">
-                </div>
-                <nav class="nav-section" role="navigation" aria-label="Main navigation">
-                    <ul class="nav-links">
-                        <li><a href="../index.html" class="nav-item">Home</a></li>
-                        <li><a href="about.html" class="nav-item">About me</a></li>
-                        <li><a href="services.html" class="nav-item">Services</a></li>
-                        <li class="dropdown">
-                            <a href="#platforms" class="nav-item">Platforms</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="https://www.egge-verlag.de/index.php?option=com_virtuemart&view=productdetails&virtuemart_product_id=831&virtuemart_category_id=1&Itemid=14" target="_blank" rel="noopener noreferrer" class="dropdown-item">Egge Verlag</a></li>
-                                <li><a href="https://www.beatstars.com/mcfabinibeats" target="_blank" rel="noopener noreferrer" class="dropdown-item">Beatstars</a></li>
-                            </ul>
-                        </li>
-                        
+
+<!-- Sélecteur de langue -->
+<div class="language-selector" style="position: fixed; top: 20px; right: 20px; z-index: 2000;">
+    <select id="languageSelect">
+        <option value="/pages/about.html">🇬🇧 EN</option>
+        <option value="/translations/about-fr.html">🇫🇷 FR</option>
+        <option value="/translations/about-it.html">🇮🇹 IT</option>
+        <option value="/translations/about-es.html">🇪🇸 ES</option>
+    </select>
+</div>
+
+<!-- Conteneur principal -->
+<div class="main-container">
+    <!-- Menu -->
+    <nav class="menu-box">
+        <div class="menu-container">
+            <span class="menu-toggle">&#9776;</span> <!-- Hamburger -->
+            <ul class="menu-list">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="has-submenu">
+                    <a href="../index.html#pricing">Pricing</a>
+                    <ul class="submenu">
+                        <li><a href="midi-compositions.html">MIDI Compositions</a></li>
+                        <li><a href="orchestral-compositions.html">Orchestral Compositions</a></li>
                     </ul>
-                </nav>
-                <a href="mailto:contact@fabienmanuelcapelli.com?subject=Contact%20Request&body=Hello%20Fabien,%20I%20would%20like%20to%20get%20in%20touch."
-                class="btn" aria-label="Contact me">Contact</a>
-            </div>
-        </header>
+                </li>
+                <li><a href="/pages/medias.html">Medias</a></li>
+                <li class="has-submenu">
+                    <a href="../index.html#platforms">Platforms</a>
+                    <ul class="submenu">
+                        <li><a href="https://www.egge-verlag.de/index.php?option=com_virtuemart&view=productdetails&virtuemart_product_id=831&virtuemart_category_id=1&Itemid=14" target="_blank" rel="noopener noreferrer">Egge Verlag</a></li>
+                        <li><a href="https://www.beatstars.com/mcfabinibeats" target="_blank" rel="noopener noreferrer">BeatStars</a></li>
+                    </ul>
+                </li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        <main id="main-content" role="main">
-            <section class="hero-section" id="about" aria-labelledby="about-heading">
-                <img src="https://cdn.builder.io/api/v1/image/assets/9a4fc4c991304f5eb40419689f9cc6cc/4c0b753d4e4bb8e13378dfacfcfd16cd18cd8b758ee56affc91c2afd3a1ac14a?apiKey=9a4fc4c991304f5eb40419689f9cc6cc&" alt="Fabien Manuel Capelli" class="profile-image">
-                <h2 class="profile-name" id="about-heading">Fabien Manuel Capelli</h2>
-                <p class="profile-alias">McFabini</p>
-                <div class="content-section">
-                    <p class="tagline">"No music, no life"</p>
-                    <p class="bio-text">Born in 2007 in the French Jura region, Fabien Capelli (registration name) or Fabien Manuel Capelli (civil name) has been immersed in music from an early age. He began playing bassoon at the age of seven with his mother, while studying musical training and choral singing at the Saint-Claude's conservatory. Passionate about ensemble music, he is a member of several amateur orchestras and plays regularly with his parents and sisters. He is a member of the ABCD&M ensemble, which brings together bassoonists from the Bourgogne Franche-Comté region. He came 6th in his category at the Concours Jeunes Vents Bassons 2019 in Mulhouse. After spending a year in Patrick Vilaire's class at CRR Chalon sur Saône, he will join Damien Rose's class at CRR Besançon in September 2022. His other passions include jazz repertoire and improvisation, MIDI composition, and conducting.</p>
-                </div>
-            </section>
+    <!-- Photo principale -->
+    <div class="img"></div>
 
-            <section class="platforms-section" id="platforms" aria-label="Platform logos">
-                <img src="https://cdn.builder.io/api/v1/image/assets/9a4fc4c991304f5eb40419689f9cc6cc/fa6cebb75726e529b8a389d75769d3e41b2fc028b148163d69764252f4ee7233?apiKey=9a4fc4c991304f5eb40419689f9cc6cc&" alt="Platform 1" class="platform-logo">
-                <img src="https://cdn.builder.io/api/v1/image/assets/9a4fc4c991304f5eb40419689f9cc6cc/b8245e33778b9d8c309a9361c0bb9cf9c4ce61c22e980efdbd42735e48dd1e5c?apiKey=9a4fc4c991304f5eb40419689f9cc6cc&" alt="Platform 2" class="platform-logo">
-                <img src="https://cdn.builder.io/api/v1/image/assets/9a4fc4c991304f5eb40419689f9cc6cc/a6140d40f7ffda7ad419ac29266be8509b778d4da984702bf5aeb835ffb4321a?apiKey=9a4fc4c991304f5eb40419689f9cc6cc&" alt="Platform 3" class="platform-logo">
-            </section>
-        </main>
+    <!-- Textes principaux -->
+    <span class="text-4">Fabien Manuel Capelli</span>
+    <span class="text-5">McFabini</span>
 
-        <footer class="footer" role="contentinfo">
-            <p>v1.0.2 © 2025 - Developed by Fabien Manuel Capelli - All rights reserved</p>
-            <p><a href="cgu.html">Terms of Service</a></p>
-        </footer>
+    <!-- Groupe biographie -->
+    <div class="group">
+        <div class="box">
+            <span class="text">About</span>
+            <span class="text-2">“No music, no life”</span>
+            <span class="text-3">
+                Born in 2007 in the French Jura region, Fabien Capelli
+                (registration name) or Fabien Manuel Capelli (civil name) has been
+                immersed in music from an early age. He began playing bassoon at the
+                age of seven with his mother, while studying musical training and
+                choral singing at the Saint-Claude’s conservatory. Passionate about
+                ensemble music, he is a member of several amateur orchestras and
+                plays regularly with his parents and sisters.<br /><br />
+                He is a member of the ABCD&M ensemble, which brings together
+                bassoonists from the Bourgogne Franche-Comté region. He came 6th in
+                his category at the Concours Jeunes Vents Bassons 2019 in Mulhouse.
+                After spending a year in Patrick Vilaire's class at CRR Chalon sur
+                Saône, he joined Damien Rose's class at CRR Besançon in September
+                2022.<br /><br />
+                His other passions include jazz repertoire and improvisation, MIDI
+                composition, and conducting.<br /><br />
+                He studied conducting with Jean-François Verdier, Pierre Walter,
+                Thibault Back de Savigny, Laurent Comte, Marc Hajjar, and will study
+                with his new teacher Joël Soichez.<br /><br />
+                He studied computer-assisted music with Thibault Raquin, known as
+                “Paddy Smith,” from 2019 to 2022 at the Saint-Claude Intercommunal
+                Conservatory. He will now study with Sebastien Descamps at the
+                Besançon Regional Conservatory.<br /><br />
+                He studied with his mother for 8 years and obtained a certificate
+                in music studies.<br /><br />
+                He has been taking classes with Sophie Landemore, professor of
+                writing (harmony, orchestration, culture, and analysis) since 2023.
+            </span>
+        </div>
     </div>
+
+    <!-- Spacer pour pousser les footers vers le bas -->
+    <div class="spacer"></div>
+</div>
+
+<!-- Footer gris principal -->
+<div class="section">
+    <div class="img-2"></div>
+    <div class="pic"></div>
+    <div class="img-3"></div>
+</div>
+
+<!-- Footer noir secondaire -->
+<div class="section-2">
+    <span class="text-6">© 2025 - Developed by Fabien Manuel Capelli</span>
+</div>
+
+<script src="../menu.js" defer></script>
+
+<!-- Script pour sélecteur de langue -->
+<script>
+const select = document.getElementById('languageSelect');
+const currentPage = window.location.pathname.split("/").pop();
+
+// Parcourt toutes les options et sélectionne celle qui correspond à la page actuelle
+for (let i = 0; i < select.options.length; i++) {
+    if (select.options[i].value.endsWith(currentPage)) {
+        select.selectedIndex = i;
+        break;
+    }
+}
+
+// Redirection vers la page correspondante lorsqu'on change la langue
+select.addEventListener('change', () => {
+    window.location.href = select.value;
+});
+</script>
+
 </body>
 </html>

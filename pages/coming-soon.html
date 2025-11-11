@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Coming Soon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{ --bg:#070f1e; --card:#0b1624; --accent:#7ee7ff; --muted:#cbd5e1aa }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;background:linear-gradient(180deg,#070f1e 0%, #0a1b31 100%);color:#fff;display:flex;align-items:center;justify-content:center;padding:24px}
+    .wrap{width:100%;max-width:860px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:20px;padding:48px;box-shadow:0 20px 50px rgba(2,6,23,0.6);text-align:center}
+    .logo{width:68px;height:68px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#6fd3ff);display:flex;align-items:center;justify-content:center;color:#052;font-weight:800;font-family:'Playfair Display',serif;margin:0 auto 20px auto}
+    h1{font-family:'Playfair Display',serif;font-size:44px;margin:10px 0}
+    p{color:var(--muted);margin:0 0 32px 0;font-size:16px}
+    button{padding:14px 28px;border:0;border-radius:12px;font-weight:600;font-size:15px;background:linear-gradient(90deg,#6ee7b7,#8be9fd);color:#022;cursor:pointer;transition:all .2s ease}
+    button:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(139,233,253,0.25)}
+    footer{margin-top:40px;color:rgba(255,255,255,0.45);font-size:13px}
+    .animate{animation:float 6s ease-in-out infinite}
+    @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+  </style>
+</head>
+<body>
+  <main class="wrap" role="main">
+    <div class="logo animate">FM</div>
+    <h1>Coming Soon</h1>
+    <p>We're crafting something new and exciting. Check back soon to see what's coming!</p>
+
+    <button onclick="history.back()">← Go Back</button>
+
+    <footer>© <span id="year"></span> — All rights reserved</footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

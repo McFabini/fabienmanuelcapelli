@@ -1,0 +1,26 @@
+.language-selector {
+  position: fixed;   /* reste visible même au scroll */
+  top: 20px;         /* distance du haut */
+  right: 20px;       /* distance de la droite */
+  z-index: 1000;     /* devant tout le reste */
+}
+
+.language-selector select {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(0,0,0,0.2);
+  background-color: #ffffff;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.language-selector select:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.language-selector select:focus {
+  outline: 2px solid #0069ff;
+  outline-offset: 2px;
+}

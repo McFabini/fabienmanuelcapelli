@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu Fabien Manuel Capelli</title>
+  <link rel="stylesheet" href="menu.css" />
+</head>
+<body>
+
+  <nav class="menu-box">
+    <div class="menu-container">
+      <span class="menu-toggle">&#9776;</span> <!-- Hamburger -->
+      <ul class="menu-list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#medias">Medias</a></li>
+        <li><a href="#platforms">Platforms</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.menu-box');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>

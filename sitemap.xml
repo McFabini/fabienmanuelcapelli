@@ -1,32 +1,319 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <title>Fabien Manuel Capelli</title>
+    <meta
+      name="description"
+      content="Fabien Manuel Capelli – compositeur, chef d’orchestre, bassoniste et réalisateur. Découvrez ses œuvres, films, services et actualités."
+    />
 
-<url>
-  <loc>https://www.fabienmanuelcapelli.com/</loc>
-  <lastmod>2024-12-31T21:41:05+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://www.fabienmanuelcapelli.com/index.html</loc>
-  <lastmod>2024-12-31T21:41:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.fabienmanuelcapelli.com/pages/about.html</loc>
-  <lastmod>2024-12-31T21:41:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.fabienmanuelcapelli.com/pages/services.html</loc>
-  <lastmod>2024-12-31T21:41:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
+    <!-- OpenGraph / SEO -->
+    <meta property="og:title" content="Fabien Manuel Capelli" />
+    <meta
+      property="og:description"
+      content="Fabien Manuel Capelli – compositeur, chef d’orchestre, bassoniste et réalisateur."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.fabienmanuelcapelli.com/" />
+    <meta property="og:image" content="public/image12114-g2kb-700h.png" />
 
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fabien Manuel Capelli" />
+    <meta
+      name="twitter:description"
+      content="Compositeur, chef d’orchestre, bassoniste et réalisateur."
+    />
+    <meta name="twitter:image" content="public/image12114-g2kb-700h.png" />
 
-</urlset>
+    <!-- Fonts (fusionnées et uniques) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&family=Inter:wght@100;300;400;500;600;700;900&family=Antonio:wght@300;400;600;700&family=Noto+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- External Styles -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+
+    <!-- Base CSS Reset -->
+    <style>
+      html {
+        line-height: 1.15;
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family: Inter, sans-serif;
+        color: var(--dl-color-theme-neutral-dark);
+        background: var(--dl-color-theme-neutral-light);
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      img {
+        display: block;
+        max-width: 100%;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    </style>
+
+    <!-- Local Styles -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <header class="indexhtml-container1">
+      <div class="indexhtml-indexhtml">
+        <div class="indexhtml-frame1st">
+          <div class="indexhtml-container2">
+            <button class="indexhtml-button1">
+              <span class="indexhtml-text10">Learn More</span>
+              <img
+                alt="iconexternal2034"
+                src="public/iconexternal2034-bpvg.svg"
+                class="indexhtml-iconexternal1"
+              />
+            </button>
+
+            <div class="indexhtml-container3">
+              <span class="indexhtml-text11">
+                Composer, Conductor, Bassoonist, Film Director, Screenwriter
+              </span>
+              <div class="indexhtml-container4">
+                <div class="indexhtml-container5">
+                  <div class="indexhtml-container6">
+                    <img
+                      alt="Fabien portrait"
+                      src="public/img022112351-f6sp-900w.png"
+                      class="indexhtml-img02211"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span class="indexhtml-text15">
+            <span class="indexhtml-text16">Fabien Manuel</span><br />
+            <span class="indexhtml-text18">Capelli</span>
+          </span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="indexhtml-services1">
+        <div class="indexhtml-makerstextcontent1">
+          <span class="indexhtml-text19">News</span>
+          <span class="indexhtml-text20">“I miss you”</span>
+        </div>
+        <span class="indexhtml-text21">
+          an original short film directed<br />
+          by Fabien Manuel Capelli
+        </span>
+        <div class="indexhtml-makerstextcontent2">
+          <span class="indexhtml-text25">
+            <span class="indexhtml-text26">Date of release :</span><br />
+            December 4th 2025
+          </span>
+        </div>
+        <img
+          alt="film still"
+          src="public/image12114-g2kb-700h.png"
+          class="indexhtml-image1"
+        />
+      </section>
+
+      <section class="indexhtml-services2">
+        <div class="indexhtml-makerstextcontent3">
+          <span class="indexhtml-text29">Services</span>
+          <span class="indexhtml-text30">Pricing</span>
+          <span class="indexhtml-text31">
+            *Available on this website and BeatStars
+          </span>
+        </div>
+        <button class="indexhtml-button2">
+          <span class="indexhtml-text32">Learn More</span>
+          <img
+            alt="external link"
+            src="public/iconexternal2103-4uhl.svg"
+            class="indexhtml-iconexternal2"
+          />
+        </button>
+        <button class="indexhtml-button3">
+          <span class="indexhtml-text33">BeatStars</span>
+          <img
+            alt="external link"
+            src="public/iconexternal2104-zci5.svg"
+            class="indexhtml-iconexternal3"
+          />
+        </button>
+      </section>
+
+      <section class="indexhtml-contact">
+        <img
+          alt="background"
+          src="public/rectangle101372-0yp-600h.png"
+          class="indexhtml-rectangle10"
+        />
+        <div class="indexhtml-group1">
+          <span class="indexhtml-text34">Contact</span>
+          <span class="indexhtml-text35">
+            Mail : contact@fabienmanuelcapelli.com
+          </span>
+        </div>
+        <button class="indexhtml-button4">
+          <span class="indexhtml-text36">Learn More</span>
+          <img
+            alt="icon"
+            src="public/iconexternal2351-ifm.svg"
+            class="indexhtml-iconexternal4"
+          />
+        </button>
+      </section>
+
+      <section class="indexhtml-platforms">
+        <img
+          alt="Rectangle background"
+          src="public/rectangle81332-9w7-200h.png"
+          class="indexhtml-rectangle8"
+        />
+        <img
+          alt="BeatStars logo"
+          src="public/image636a4d63dae2e9668b947fd1beatstarslogocolorlig1372-1lgr-200h.png"
+          class="indexhtml-image636a4d63dae2e9668b947fd1beatstarslogocolorlig"
+        />
+        <img
+          alt="Spotify logo"
+          src="public/id0ppnlny8173556633206111372-61f-200h.png"
+          class="indexhtml-id0p-pnlny817355663320611"
+        />
+        <img
+          alt="Apple Music logo"
+          src="public/screenshot20241230at14463611372-eb5r-200h.png"
+          class="indexhtml-screenshot20241230at1446361"
+        />
+        <img
+          alt="SACEM logo"
+          src="public/logosacem202012333-k39-200h.png"
+          class="indexhtml-logo-sacem20201"
+        />
+      </section>
+
+      <section class="indexhtml-discography">
+        <img
+          alt="background"
+          src="public/rectangle152116-7ns-1000h.png"
+          class="indexhtml-rectangle15"
+        />
+        <img
+          alt="Album artwork"
+          src="public/image273b0655028e765df77d9fa00256c6476b2afe18f366e2372-m7a-400h.png"
+          class="indexhtml-image273b0655028e765df77d9fa00256c6476b2afe18f366e"
+        />
+        <img
+          alt="Midnight Echoes cover"
+          src="public/midnightechoes12362-934c-400h.png"
+          class="indexhtml-midnight-echoes1"
+        />
+        <div class="indexhtml-makerstextcontent4">
+          <span class="indexhtml-text37">Discography</span>
+          <span class="indexhtml-text38">Latest releases</span>
+        </div>
+        <button class="indexhtml-button5">
+          <span class="indexhtml-text39">Listen now</span>
+          <img
+            alt="icon"
+            src="public/iconexternal2117-p1oo.svg"
+            class="indexhtml-iconexternal5"
+          />
+        </button>
+        <button class="indexhtml-button6">
+          <span class="indexhtml-text40">Listen now</span>
+          <img
+            alt="icon"
+            src="public/iconexternal2117-13soh.svg"
+            class="indexhtml-iconexternal6"
+          />
+        </button>
+        <button class="indexhtml-button7">
+          <span class="indexhtml-text41">Listen now</span>
+          <img
+            alt="icon"
+            src="public/iconexternal2118-i4jl.svg"
+            class="indexhtml-iconexternal7"
+          />
+        </button>
+      </section>
+
+      <section class="indexhtml-previous">
+        <img
+          alt="Rectangle background"
+          src="public/rectangle172331-md5-1200h.png"
+          class="indexhtml-rectangle17"
+        />
+        <span class="indexhtml-text62">Previously:</span>
+        <img
+          alt="Journees fou de basson Oyonnax 2025"
+          src="public/journeesfoudebassonoyonnax2025resized12331-op6-900h.png"
+          class="indexhtml-journeesfoudebasson-oyonnax2025resized1"
+        />
+        <img
+          alt="Affiche journées Oyonnax 2025"
+          src="public/affichejourneesoyonnax2025resized12331-wnec-900h.png"
+          class="indexhtml-affiche-journees-oyonnax2025resized1"
+        />
+        <span class="indexhtml-text63">
+          “Fou de Basson”, founded in 1988, is a French association dedicated to
+          promoting the bassoon and its practice. It brings together all
+          bassoonists, regardless of skill level, and fosters communication
+          between musicians, composers, and enthusiasts...
+        </span>
+        <img
+          alt="House in Motion cover"
+          src="public/houseinmotion12362-w8yq-400h.png"
+          class="indexhtml-housein-motion1"
+        />
+      </section>
+    </main>
+
+    <footer>
+      <img
+        alt="Rectangle footer"
+        src="public/rectangle162334-54yx.svg"
+        class="indexhtml-rectangle16"
+      />
+      <span class="indexhtml-text42">
+        25000 Besançon<br />39260 Crenans<br />Bourgogne-Franche-Comté<br />FR
+      </span>
+      <span class="indexhtml-text50">Fabien Manuel Capelli</span>
+      <button class="indexhtml-button8">
+        <span class="indexhtml-text51">CGU</span>
+        <img
+          alt="icon"
+          src="public/iconexternal2334-8hf9.svg"
+          class="indexhtml-iconexternal8"
+        />
+      </button>
+      <span class="indexhtml-text52">
+        contact@fabienmanuelcapelli.com<br />+33 7 49 43 75 77
+      </span>
+      <span class="indexhtml-text59">© 2025 - V2 - Fabien Manuel Capelli</span>
+    </footer>
+  </body>
+</html>

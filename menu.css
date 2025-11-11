@@ -1,136 +1,150 @@
-         :root {
-            --primary-color: #0069ff;
-            --text-dark: #0a2a42;
-            --text-light: #fff;
-            --bg-light: #fff;
-            --bg-dark: #000;
-            --bg-light-gray: #d9d9d9;
-            --transition-speed: 0.3s;
-        }
+/* Reset de base */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/* Menu sticky */
+.menu-box {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  padding: 15px 0;          /* taille normale */
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+/* Classe à ajouter quand on scroll vers le bas */
+.menu-box.scrolled {
+padding: 10px 0;
+  opacity: 0.5; /* devient presque transparent */
+}
 
-        body {
-            font-family: Inter, system-ui, -apple-system, sans-serif;
-            line-height: 1.5;
-            overflow-x: hidden;
-            max-width: 100vw;
-        }
+/* Conteneur autour du texte du menu */
+.menu-container {
+  display: inline-block;     /* largeur selon le texte */
+  background-color: #111;    /* fond noir autour du texte seulement */
+  padding: 10px 30px;        /* espace autour des liens */
+  border-radius: 8px;        /* coins arrondis */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4); /* légère ombre */
+}
 
-        .header {
-            background-color: var(--bg-light);
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+/* Liste du menu */
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
 
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2rem;
-            padding: 0.5rem;
-        }
+.menu-list li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  transition: color 0.3s;
+}
 
-        .brand-name {
-            font-family: 'Joti One', cursive;
-            color: var(--text-dark);
-            font-size: 1.2rem;
-            transition: color var(--transition-speed) ease;
-        }
+.menu-list li a:hover {
+  color: #ffcc00;
+}
 
-        .brand-name:hover {
-            color: var(--primary-color);
-        }
+/* Submenu styles */
+.menu-list li {
+  position: relative; /* for absolute submenu positioning */
+}
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            list-style: none;
-        }
+.submenu {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 8px);
+  background-color: #111;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  min-width: 160px;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.25s ease, transform 0.25s ease, max-height 0.25s ease;
+  overflow: hidden;
+  max-height: 0;
+  z-index: 1100;
+}
 
-        .nav-item {
-            color: var(--text-dark);
-            text-decoration: none;
-            padding: 0.5rem;
-            transition: all var(--transition-speed) ease;
-            position: relative;
-        }
+.submenu li a {
+  display: block;
+  padding: 8px 16px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+}
 
-        .nav-item::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary-color);
-            transition: width var(--transition-speed) ease;
-        }
+.submenu li a:hover {
+  color: #ffcc00;
+}
 
-        .nav-item:hover::after,
-        .nav-item:focus::after {
-            width: 100%;
-        }
+/* show submenu on hover (desktop) */
+.menu-list li.has-submenu:hover > .submenu {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 500px;
+}
 
-        .dropdown {
-            position: relative;
-        }
+/* Hamburger menu */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
+}
 
-        .dropdown-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: var(--bg-light);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            z-index: 1000;
-            list-style: none;
-            padding: 0.5rem 0;
-            margin: 0;
-        }
+/* Responsive mobile */
+@media screen and (max-width: 768px) {
+  .menu-list {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #111;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    left: 0;
+    padding: 10px 0;
+  }
 
-        .dropdown-item {
-            display: block;
-            padding: 0.5rem 1rem;
-            color: var(--text-dark);
-            text-decoration: none;
-            transition: background-color var(--transition-speed) ease;
-        }
+  /* In mobile, make submenu items flow within the vertical menu */
+  .submenu {
+    position: relative;
+    top: 0;
+    left: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding-left: 12px;
+    max-height: 1000px;
+    opacity: 1;
+    transform: none;
+  }
 
-        .dropdown-item:hover {
-            background-color: var(--bg-light-gray);
-            color: var(--primary-color);
-        }
+  .submenu li a {
+    padding: 8px 24px;
+  }
 
-        .dropdown:hover .dropdown-menu {
-            display: block;
-        }
+  .menu-box.show .menu-list {
+    display: flex;
+  }
 
-        .contact-btn {
-            background-color: var(--primary-color);
-            color: var(--text-light);
-            border: none;
-            border-radius: 10px;
-            padding: 0.75rem 1.5rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all var(--transition-speed) ease;
-        }
-
-        .contact-btn:hover,
-        .contact-btn:focus {
-            background-color: #0052cc;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+}

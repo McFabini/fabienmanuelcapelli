@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Fabien Manuel Capelli</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/menu.css">
+  <link rel="stylesheet" href="/style/contact.css">
+  <link rel="stylesheet" href="/languages-selectors.css">
+</head>
+<body>
+
+  <!-- Language selector -->
+  <div class="language-selector" style="position: fixed; top: 20px; right: 20px; z-index: 2000;">
+    <select id="languageSelect">
+      <option value="/index.html">🇬🇧 EN</option>
+      <option value="/translations/index-fr.html">🇫🇷 FR</option>
+      <option value="/translations/index-it.html">🇮🇹 IT</option>
+      <option value="/translations/index-es.html">🇪🇸 ES</option>
+    </select>
+    <script>
+      const select = document.getElementById('languageSelect');
+      const currentPage = window.location.pathname.split("/").pop();
+      if(currentPage === "contact-en.html") select.value = "contact-en.html";
+      select.addEventListener('change', () => { window.location.href = select.value; });
+    </script>
+  </div>
+
+  <!-- Menu -->
+  <nav class="menu-box">
+    <div class="menu-container">
+      <span class="menu-toggle">&#9776;</span>
+      <ul class="menu-list">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/pages/about.html">About</a></li>
+        <li class="has-submenu">
+          <a href="#pricing">Pricing</a>
+          <ul class="submenu">
+            <li><a href="/pages/midi-compositions.html">MIDI Compositions</a></li>
+            <li><a href="/pages/orchestral-compositions.html">Orchestral Compositions</a></li>
+          </ul>
+        </li>
+        <li><a href="/pages/medias.html">Medias</a></li>
+        <li class="has-submenu">
+          <a href="#platforms">Platforms</a>
+          <ul class="submenu">
+            <li><a href="https://www.egge-verlag.de/" target="_blank" rel="noopener noreferrer">Egge Verlag</a></li>
+            <li><a href="https://www.beatstars.com/mcfabinibeats" target="_blank" rel="noopener noreferrer">BeatStars</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contact form -->
+  <section class="contact-section">
+    <h1>Contact Me</h1>
+    <p>Fill out this form to reach me directly.</p>
+
+    <form class="contact-form" action="https://formspree.io/f/xrbrglab" method="POST">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="Subject of your message">
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" placeholder="Write your message..." required></textarea>
+      </div>
+      <button type="submit">Send</button>
+      <p class="form-response" style="display:none; color:green; margin-top:10px;">
+        ✅ Your message has been sent successfully!
+      </p>
+    </form>
+  </section>
+
+  <script src="/menu.js"></script>
+
+  <script>
+    // Formspree AJAX submission for confirmation message
+    const form = document.querySelector('.contact-form');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        form.reset();
+        document.querySelector('.form-response').style.display = 'block';
+      } else {
+        alert('Oops! Something went wrong.');
+      }
+    });
+  </script>
+
+</body>
+</html>

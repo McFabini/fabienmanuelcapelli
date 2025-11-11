@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface:wght@400&display=swap" />
+    <link rel="stylesheet" href="/index.css" />
+    <link rel="stylesheet" href="/style/medias.css" />
+    <link rel="stylesheet" href="/languages-selectors.css" />
+    <link rel="stylesheet" href="/menu.css" />
+</head>
+<body>
+    <!-- Selettore lingua -->
+    <div class="language-selector" style="position: fixed; top: 20px; right: 20px; z-index: 2000;">
+        <select id="languageSelect">
+            <option value="/pages/medias.html">🇬🇧 EN</option>
+            <option value="/translations/medias-fr.html">🇫🇷 FR</option>
+            <option value="/translations/medias-it.html">🇮🇹 IT</option>
+            <option value="/translations/medias-es.html">🇪🇸 ES</option>
+        </select>
+    </div>
+
+    <!-- Menu -->
+    <nav class="menu-box">
+      <div class="menu-container">
+        <span class="menu-toggle">&#9776;</span>
+        <ul class="menu-list">
+          <li><a href="/translations/index-it.html">Home</a></li>
+          <li><a href="/translations/about-it.html">Chi sono</a></li>
+          <li class="has-submenu">
+            <a href="#pricing">Prezzi</a>
+            <ul class="submenu">
+              <li><a href="/translations/midi-compositions-it.html">Composizioni MIDI</a></li>
+              <li><a href="/translations/orchestral-compositions-it.html">Composizioni Orchestrali</a></li>
+            </ul>
+          </li>
+          <li><a href="/translations/medias-it.html">Media</a></li>
+          <li class="has-submenu">
+            <a href="#platforms">Piattaforme</a>
+            <ul class="submenu">
+              <li><a href="https://www.egge-verlag.de/index.php?option=com_virtuemart&view=productdetails&virtuemart_product_id=831&virtuemart_category_id=1&Itemid=14" target="_blank" rel="noopener noreferrer">Egge Verlag</a></li>
+              <li><a href="https://www.beatstars.com/mcfabinibeats" target="_blank" rel="noopener noreferrer">BeatStars</a></li>
+            </ul>
+          </li>
+          <li><a href="/translations/contact-it.html">Contatto</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Contenuto principale -->
+    <div class="main-container">
+        <div class="text">MEDIA</div>
+        <div class="pic"></div>
+        <div class="pic-2"></div>
+        <div class="img"></div>
+        <div class="pic-3"></div>
+        <div class="pic-4"></div>
+    </div>
+
+    <!-- Footer grigio e nero -->
+    <footer class="footer">
+      <div class="footer-bg"></div>
+      <div class="footer-grid">
+        <div class="footer-left">
+          <p class="footer-name">Fabien Manuel Capelli</p>
+          <p class="footer-phone">+33 7 49 43 75 77</p>
+          <p class="footer-email">contact@fabienmanuelcapelli.com</p>
+        </div>
+        <div class="footer-center">
+          <p class="footer-location">
+            25000 Besançon<br>
+            39260 Crenans<br>
+            Borgogna-Franca Contea<br>
+            FR
+          </p>
+        </div>
+        <div class="footer-right">
+          <a href="/pages/cgu.html" class="footer-link">Termini e Condizioni</a>
+          <p class="footer-copyright">© 2025 - V2 - Fabien Manuel Capelli</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/menu.js" defer></script>
+    <script>
+        const select = document.getElementById('languageSelect');
+
+        const langUrls = {
+            'EN': '/pages/medias.html',
+            'FR': '/translations/medias-fr.html',
+            'IT': '/translations/medias-it.html',
+            'ES': '/translations/medias-es.html'
+        };
+
+        function getLangFromUrl(url) {
+            return Object.keys(langUrls).find(key => langUrls[key] === url) || null;
+        }
+
+        const currentUrl = window.location.pathname;
+        const currentLang = getLangFromUrl(currentUrl);
+
+        if (currentLang) {
+            select.value = langUrls[currentLang];
+            localStorage.setItem('selectedLang', currentLang);
+        } else {
+            const storedLang = localStorage.getItem('selectedLang');
+            if (storedLang && langUrls[storedLang]) {
+                select.value = langUrls[storedLang];
+            }
+        }
+
+        select.addEventListener('change', () => {
+            const selectedUrl = select.value;
+            const selectedLang = getLangFromUrl(selectedUrl);
+            if (selectedLang) localStorage.setItem('selectedLang', selectedLang);
+            window.location.href = selectedUrl;
+        });
+    </script>
+</body>
+</html>

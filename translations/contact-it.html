@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contatto - Fabien Manuel Capelli</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/menu.css">
+  <link rel="stylesheet" href="/style/contact.css">
+  <link rel="stylesheet" href="/languages-selectors.css">
+</head>
+<body>
+
+  <!-- Selettore lingua -->
+  <div class="language-selector" style="position: fixed; top: 20px; right: 20px; z-index: 2000;">
+    <select id="languageSelect">
+      <option value="/pages/contact.html">🇬🇧 EN</option>
+      <option value="/translations/contact-fr.html">🇫🇷 FR</option>
+      <option value="/translations/contact-it.html">🇮🇹 IT</option>
+      <option value="/translations/contact-es.html">🇪🇸 ES</option>
+    </select>
+  </div>
+
+  <!-- Menu -->
+  <nav class="menu-box">
+    <div class="menu-container">
+      <span class="menu-toggle">&#9776;</span>
+      <ul class="menu-list">
+        <li><a href="/translations/index-it.html">Home</a></li>
+        <li><a href="/translations/about-it.html">Chi sono</a></li>
+        <li class="has-submenu">
+          <a href="#pricing">Prezzi</a>
+          <ul class="submenu">
+            <li><a href="/translations/midi-compositions-it.html">Composizioni MIDI</a></li>
+            <li><a href="/translations/orchestral-compositions-it.html">Composizioni orchestrali</a></li>
+          </ul>
+        </li>
+        <li><a href="/translations/medias-it.html">Media</a></li>
+        <li class="has-submenu">
+          <a href="#platforms">Piattaforme</a>
+          <ul class="submenu">
+            <li><a href="https://www.egge-verlag.de/" target="_blank" rel="noopener noreferrer">Egge Verlag</a></li>
+            <li><a href="https://www.beatstars.com/mcfabinibeats" target="_blank" rel="noopener noreferrer">BeatStars</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contatto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Formulario di contatto -->
+  <section class="contact-section">
+    <h1>Contattami</h1>
+    <p>Compila questo modulo per contattarmi direttamente.</p>
+
+    <form class="contact-form" action="https://formspree.io/f/xrbrglab" method="POST">
+      <div class="form-group">
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" placeholder="Il tuo nome" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="_replyto" placeholder="La tua email" required>
+      </div>
+      <div class="form-group">
+        <label for="subject">Oggetto</label>
+        <input type="text" id="subject" name="subject" placeholder="Oggetto del messaggio">
+      </div>
+      <div class="form-group">
+        <label for="message">Messaggio</label>
+        <textarea id="message" name="message" rows="6" placeholder="Scrivi il tuo messaggio..." required></textarea>
+      </div>
+      <button type="submit">Invia</button>
+      <p class="form-response" style="display:none; color:green; margin-top:10px;">
+        ✅ Il tuo messaggio è stato inviato con successo!
+      </p>
+    </form>
+  </section>
+
+  <script src="/menu.js"></script>
+
+  <!-- Script per mantenere il selettore lingua -->
+  <script>
+    const select = document.getElementById('languageSelect');
+    const currentPage = window.location.pathname.split("/").pop();
+
+    // Seleziona l'opzione corrispondente alla pagina corrente
+    for (let i = 0; i < select.options.length; i++) {
+      if (select.options[i].value.endsWith(currentPage)) {
+        select.selectedIndex = i;
+        break;
+      }
+    }
+
+    // Redireziona alla pagina corrispondente quando si cambia lingua
+    select.addEventListener('change', () => {
+      window.location.href = select.value;
+    });
+
+    // Invio AJAX tramite Formspree per mostrare il messaggio di conferma
+    const form = document.querySelector('.contact-form');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        form.reset();
+        document.querySelector('.form-response').style.display = 'block';
+      } else {
+        alert('Oops! Qualcosa è andato storto.');
+      }
+    });
+  </script>
+
+</body>
+</html>

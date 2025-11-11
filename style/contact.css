@@ -1,0 +1,83 @@
+/* === Styles pour le formulaire de contact moderne === */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-section {
+  max-width: 800px;
+  margin: 120px auto 60px auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.contact-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #222;
+}
+
+.contact-section p {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 8px rgba(108,99,255,0.3);
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #6c63ff, #9f8fff);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: linear-gradient(135deg, #574ddf, #7f6fff);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    margin: 100px 20px 40px 20px;
+    padding: 30px 20px;
+  }
+}
